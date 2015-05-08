@@ -1,11 +1,11 @@
- html
-    head
-      title= pageTitle
-      script(type='text/javascript').
-    body
-      h1 Jade - node template engine 
-        p
-          Jade is a terse and simple
-          templating language with a
-          strong focus on performance
-          and powerful features.
+head
+  title Leaderboard
+  meta(name="viewport" content="width=device-width, user-scalable=no")
+
+body
+  .outer
+    +leaderboard
+
+template(name="leaderboard")
+  .h1 test
+  .p test
