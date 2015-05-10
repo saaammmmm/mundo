@@ -1,16 +1,3 @@
-var setupDataBase = true
-
-if (setupDataBase) {
-  console.log("Setting up database")
-  try {
-    new Mongo.Collection('players');
-    PlayersList = new Mongo.Collection('players');
-  }
-  catch (err) {
-    console.log("Error in setting up database");
-  }
-
-}
 
 
 if (Meteor.isClient) {
@@ -32,6 +19,19 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
+  var setupDataBase = true
+
+if (setupDataBase) {
+  console.log("Setting up database")
+  try {
+    new Mongo.Collection('players');
+    PlayersList = new Mongo.Collection('players');
+  }
+  catch (err) {
+    console.log("Error in setting up database");
+  }
+
+}
 
 
 }
