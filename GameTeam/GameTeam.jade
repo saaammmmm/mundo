@@ -6,7 +6,6 @@ head
 
 body
     +welcomePage
-    +signUpPage
 
 template(name="welcomePage")
   div.container-fluid
@@ -24,24 +23,4 @@ template(name="welcomePage")
             span.input-group-addon.glyphicon.glyphicon-lock
          p.btn-group
             a.btn.btn-default.btn-lg(href="") Login
-            a.btn.btn-success.btn-lg(href="") Join
-
-
-template(name="signUpPage")
-  div.container-fluid
-        .col-md-4
-          .input-group
-            input.form-control(type='text', placeholder='username')
-            span.input-group-addon.glyphicon.glyphicon-user
-          .input-group
-            input.form-control(type='password', placeholder='password')
-            span.input-group-addon.glyphicon.glyphicon-lock
-          .input-group
-            input.form-control(type='password', placeholder='repeat password')
-            span.input-group-addon.glyphicon.glyphicon-lock
-          .input-group
-            input.form-control(type='password', placeholder='repeat password')
-            span.input-group-addon.glyphicon.glyphicon-lock
-          p.btn-group
-            a.btn.btn-default.btn-lg(href="") Cancel
             a.btn.btn-success.btn-lg(href="") Join
