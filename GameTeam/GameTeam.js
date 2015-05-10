@@ -1,3 +1,18 @@
+var setupDataBase = true
+
+if (setupDataBase) {
+  console.log("Setting up database")
+  try {
+    new Mongo.Collection('players');
+    PlayersList = new Mongo.Collection('players');
+  }
+  catch (err) {
+    console.log("Error in setting up database");
+  }
+
+}
+
+
 if (Meteor.isClient) {
 /*  // counter starts at 0
   Session.setDefault('counter', 0);
@@ -17,13 +32,6 @@ if (Meteor.isClient) {
 }
 
 if (Meteor.isServer) {
-  Meteor.startup(function () {
-    app.get('/home', function(req, res){
-      res.render('GameTeam');
-    });
 
-    app.get('/SignUp', function(req, res){
-      res.render('SignUp');
-    });
-  });
+
 }
