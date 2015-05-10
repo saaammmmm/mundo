@@ -1,1 +1,16 @@
 /* CSS declarations go here */
+h6 {
+    color: rgb(230, 230, 230);
+}
+body {
+    background-color: rgb(50, 50, 50);
+}
+.form-control{
+    background-color: rgb(70, 70, 70);
+    margin-top: 2px;
+    color: rgb(220, 220, 220);)
+}
+div.jumbotron {
+    color: rgb(230, 230, 230);
+    background-color: rgb(50, 50, 50);
+}

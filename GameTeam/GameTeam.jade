@@ -2,26 +2,11 @@ head
   title Leaderboard
   meta(name="viewport" content="width=device-width, user-scalable=no")
   link(href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', rel='stylesheet')
-  style.
-     h6 {
-        color: rgb(230, 230, 230);
-     }
-     body {
-        background-color: rgb(50, 50, 50); 
-     }
-     .form-control{
-        background-color: rgb(70, 70, 70);
-        margin-top: 2px;
-        color: rgb(220, 220, 220);)
-     }
-     div.jumbotron {
-        color: rgb(230, 230, 230);
-        background-color: rgb(50, 50, 50);
-     }
+  link(href='GameTeam.css', rel='stylesheet')
 
 body
   .outer
-    +leaderboard
+    +welcomePage
 template(name="welcomePage")
   div.container
     h6 Gnarcore Studios
