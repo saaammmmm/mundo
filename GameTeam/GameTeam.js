@@ -18,6 +18,12 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+    app.get('/home', function(req, res){
+      res.render('GameTeam');
+    });
+
+    app.get('/SignUp', function(req, res){
+      res.render('SignUp');
+    });
   });
 }
