@@ -1,9 +1,10 @@
-console.log("Creating users table")
-var UserTable = new Mongo.Collection('Users');
-console.log("Users table created");
+
 
 
 if (Meteor.isClient) {
+  console.log("Creating users table")
+var UserTable = new Mongo.Collection('Users');
+console.log("Users table created");
 /*  // counter starts at 0
   Session.setDefault('counter', 0);
 
