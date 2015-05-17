@@ -1,3 +1,6 @@
+console.log("Creating users table")
+var UserTable = new Mongo.Collection('Users');
+console.log("Users table created");
 
 
 if (Meteor.isClient) {
