@@ -9,8 +9,8 @@ if (Meteor.isClient) {/*
     Router.go('join');
   }
 */
-   console.log("Welcome, client to OBERift")
-  Router.map( function () {
+   console.log("Welcome, client to OBERift");
+  /*Router.map( function () {
     // simple route with
     // name 'home' that
     // matches '/' and automatically renders
@@ -18,7 +18,7 @@ if (Meteor.isClient) {/*
     this.route('home', {path: '/'});
   }); // end of Router.map()...
 
-
+*/
 
 
 
