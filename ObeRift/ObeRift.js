@@ -10,7 +10,7 @@ if (Meteor.isClient) {/*
   }
 */
    console.log("Welcome, client to OBERift")
-  Router.map( function () {
+  /*Router.map( function () {
     // simple route with
     // name 'home' that
     // matches '/' and automatically renders
@@ -18,7 +18,7 @@ if (Meteor.isClient) {/*
     this.route('home', {path: '/'});
   }); // end of Router.map()...
 
-
+*/
 
 
 
