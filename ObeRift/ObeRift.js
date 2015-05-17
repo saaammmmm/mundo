@@ -9,10 +9,20 @@ if (Meteor.isClient) {/*
     Router.go('join');
   }
 */
-  Router.map(function(){
+ 
+  Router.map( function () {
+    // simple route with
+    // name 'home' that
+    // matches '/' and automatically renders
+    // template 'home'
     this.route('home', {path: '/'});
-    //this.route('join', {path: '/join'});
   }); // end of Router.map()...
+
+
+
+
+
+
   /* // Discern what the hell we are doing
   console.log("Creating users table")
   UserTable = new Meteor.Collection('Users'); // Do not user var
