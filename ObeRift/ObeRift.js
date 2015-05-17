@@ -10,14 +10,16 @@ if (Meteor.isClient) {
   console.log("Welcome, client to OBERift")
 
   
+function insertSomeData(){
+    // Insert some dummy data
+    UserTable.insert({
+        name: "Sam",
+        rank: 9000
 
-  // Insert some dummy data
-  UserTable.insert({
-      name: "Sam",
-      rank: 9000
-
-  }); // End if insert...
+    }); // End if insert...
+    }
   UserTable.find().fetch();
+
 }
 
 if (Meteor.isServer) {
