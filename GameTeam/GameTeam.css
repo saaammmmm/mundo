@@ -21,7 +21,7 @@ body {
     color: rgb(220, 220, 220);
 }
 
-div.jumbotron {
+div.jumbotron, div.panel {
     color: rgb(230, 230, 230);
     background-color: rgb(50, 50, 50);
 }
@@ -35,6 +35,7 @@ div.jumbotron {
 
 .outlined-font {
     color: whitesmoke;
+    font-weight: bold;
     -webkit-text-fill-color: whitesmoke; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: grey;
@@ -48,4 +49,11 @@ div.jumbotron {
 .background-column {
     background-color: rgb(228,103,103);
     background-size: cover;
+    height: 65vh;
+}
+
+.background-column-green {
+    background-color: rgb(96, 227,96);
+    background-size: cover;
+    height: 65vh;
 }
