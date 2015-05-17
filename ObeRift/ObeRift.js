@@ -3,7 +3,7 @@
 
   Router.map(function(){
     this.route('home', {path: '/'});
-    this.route('join', {path: '/join'});
+    //this.route('join', {path: '/join'});
   }); // end of Router.map()...
 
 
