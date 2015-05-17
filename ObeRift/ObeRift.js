@@ -9,9 +9,9 @@ Router.map(function(){
 
 
 if (Meteor.isClient) {
-  Template.home.autoredirect = function(){
+  /*Template.home.autoredirect = function(){
     Router.go('join');
-  }
+  }*/
   // Discern what the hell we are doing
   console.log("Creating users table")
   UserTable = new Meteor.Collection('Users'); // Do not user var
