@@ -9,16 +9,16 @@ if (Meteor.isClient) {
   }*/
 
   // Discern what the hell we are doing
-  console.log("Creating users table")
+  console.log("Creating users table");
   UserTable = new Meteor.Collection('Users'); // Do not user var
   console.log("Users table created");
   console.log("Welcome, client to OBERift")
 
-  
-Router.map(function(){
-  this.route('home', {path: '/'});
-  this.route('join', {path: '/join'});
-}); // end of Router.map()...
+
+  Router.map(function(){
+    this.route('home', {path: '/'});
+    this.route('join', {path: '/join'});
+  }); // end of Router.map()...
 
 /*
     UserTable.insert({
@@ -28,9 +28,9 @@ Router.map(function(){
     }); // End if insert...
     
   UserTable.find().fetch();
+*/
 
 }
-
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift")
 
