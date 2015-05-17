@@ -22,7 +22,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift")
 
-
+    var UserTable = new Meteor.Collection('Users');
 
 
 }
