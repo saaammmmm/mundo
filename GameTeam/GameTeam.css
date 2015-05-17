@@ -26,11 +26,21 @@ div.jumbotron, div.panel {
     background-color: rgb(50, 50, 50);
 }
 
+div.panel {
+    margin-bottom: 0px;
+    border: 0px
+}
+
 .box-shadow {
     -webkit-box-shadow: 0 15px 10px #777;
     -moz-box-shadow: 0 15px 10px #777;
     box-shadow: 0 1px 10px black;
     border-radius: 7px;
+}
+
+.white-font {
+    color: whitesmoke;
+    font-weight: bold;
 }
 
 .outlined-font {
@@ -46,14 +56,23 @@ div.jumbotron, div.panel {
         0.5px 0.5px 0 grey;
 }
 
-.background-column {
+.red-column {
     background-color: rgb(228,103,103);
     background-size: cover;
     height: 65vh;
 }
 
-.background-column-green {
+.green-column {
     background-color: rgb(96, 227,96);
     background-size: cover;
     height: 65vh;
+}
+
+.secondary-column {
+    height: 65vh;
+    background-color: rgba(245, 245, 245, 0.08);
+}
+
+.nav-size {
+    max-width: 900px;
 }
