@@ -3,6 +3,9 @@
 
 if (Meteor.isClient) {
   console.log("Welcome, client to OBERift")
+    console.log("Creating users table")
+  var UserTable = new Meteor.Collection('Users');
+  console.log("Users table created");
 /*  // counter starts at 0
   Session.setDefault('counter', 0);
 
@@ -22,9 +25,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift")
-  console.log("Creating users table")
-  var UserTable = new Meteor.Collection('Users');
-  console.log("Users table created");
+
 
 
 
