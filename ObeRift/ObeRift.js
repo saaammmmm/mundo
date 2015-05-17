@@ -16,7 +16,9 @@ if (Meteor.isClient) {
       rank: 9000
 
   }); // End if insert...
-
+  UserTable.find({
+    name: "Sam"
+  });
 }
 
 if (Meteor.isServer) {
