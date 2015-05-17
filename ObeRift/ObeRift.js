@@ -2,9 +2,7 @@
 
 
 if (Meteor.isClient) {
-  console.log("Creating users table")
-var UserTable = new Mongo.Collection('Users');
-console.log("Users table created");
+
 /*  // counter starts at 0
   Session.setDefault('counter', 0);
 
@@ -23,18 +21,10 @@ console.log("Users table created");
 }
 
 if (Meteor.isServer) {
-  /*var setupDataBase = true
+  console.log("Creating users table")
+  var UserTable = new Mongo.Collection('Users');
+  console.log("Users table created");
 
-  if (setupDataBase) {
-    console.log("Setting up database")
-    try {
-      new Mongo.Collection('players');
-      PlayersList = new Mongo.Collection('players');
-    }
-    catch (err) {
-      console.log("Error in setting up database");
-    }
-  }*/
 
 
 }
