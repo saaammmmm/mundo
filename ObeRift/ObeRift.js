@@ -2,25 +2,21 @@
 
 
 if (Meteor.isClient) {
+  // Discern what the hell we are doing
   console.log("Welcome, client to OBERift")
-    console.log("Creating users table")
+
+  // Create the table
+  console.log("Creating users table")
   var UserTable = new Meteor.Collection('Users');
   console.log("Users table created");
-/*  // counter starts at 0
-  Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
+  // Insert some dummy data
+  UserTable.insert({
+      name: "Sam",
+      rank: 9000
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
-    }
-  });*/
+  }); // End if insert...
+
 }
 
 if (Meteor.isServer) {
