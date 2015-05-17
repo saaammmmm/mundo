@@ -1,14 +1,15 @@
-
+// Create the table
+  
 
 
 if (Meteor.isClient) {
   // Discern what the hell we are doing
+  console.log("Creating users table")
+  UserTable = new Meteor.Collection('Users'); // Do not user var
+  console.log("Users table created");
   console.log("Welcome, client to OBERift")
 
-  // Create the table
-  console.log("Creating users table")
-  var UserTable = new Meteor.Collection('Users');
-  console.log("Users table created");
+  
 
   // Insert some dummy data
   UserTable.insert({
@@ -22,7 +23,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift")
 
-    var UserTable = new Meteor.Collection('Users');
+    UserTable = new Meteor.Collection('Users'); // dp not use var
 
 
 }
