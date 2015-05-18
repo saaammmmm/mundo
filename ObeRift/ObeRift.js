@@ -7,7 +7,7 @@ if (Meteor.isClient) {
   //userStats = new Meteor.collection('userStats');
 
 
-  Meteor.call(getLoLAccount, "Tiandi", function(err, respJson) {
+  Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
       if(err) {
           window.alert("Error: " + err.reason);
           console.log("error occured on receiving data on server. ", err );
