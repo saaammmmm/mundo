@@ -23,7 +23,7 @@ if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
 
     Meteor.methods({
-        getLoLAccount: function(userName){
+        'getLoLAccount' : function(userName){
             console.log("Fetching LoL informaion for: " + userName);
             var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
             var result = Meteor.http.get(url, {timeout: 30000});
