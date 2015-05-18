@@ -134,8 +134,18 @@
         <div class="container-fluid">
             <div class="jumbotron">
                 <h1>Hello, {{currentUserName}}!</h1>
-                <p>This is your dahsboard</p>
-                <h3>Your Game Info</h3>
+                <p>This is your dashboard</p>
+                 <div class="container">
+                <header>
+                  <h1>Your Game Info</h1>
+                </header>
+
+                <ul>
+                  {{#each userGame}}
+                    {{> userGame}}
+                  {{/each}}
+                </ul>
+              </div>
                 <form class="form-inline">
                 <div class="form-group">
                     <label for="gameTitle">Game</label>
@@ -150,4 +160,10 @@
             </div>
         </div>
     </body>
+</template>
+
+<template name="userGame">
+  <li>{{gameTitle}}</li>
+  <li>{{gameUsername}}</li>
+  <li>{{gameStatsText}}</li>
 </template>
