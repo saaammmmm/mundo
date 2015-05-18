@@ -16,8 +16,9 @@ if (Meteor.isClient) {
 
 
   Router.map(function(){
-    this.route('home', {path: '/'});
-    this.route('join', {path: '/join'});
+    this.route('home',          {path: '/'});
+    this.route('join',          {path: '/join'});
+    this.route('dashboard',     {path: 'dashboard'});
   }); // end of Router.map()...
 
 /*
