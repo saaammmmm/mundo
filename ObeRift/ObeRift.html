@@ -21,7 +21,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" style="font-weight: bold">
                         <li><a href="#">Get the App</a></li>
+                        {{#if currentUser}}
                         <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
+                        {{/if}}
                         <li><a href="#">{{> loginButtons}}</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -34,11 +36,13 @@
                         <h1><span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span></h1>
                         <h2>Bringing gamers together</h2>
                         <a class="btn btn-success" href="{{pathFor 'join'}}" role="button">GET STARTED</a>
-                        <a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a>
+                        {{#if currentUser}}
+                        <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
+                        {{/if}}
                     </div>
                     <div class="col-md-4 white-font">
                         <p style="margin-top: 50px">
-                            Find players anywhere, any game, instantly with <span style="color: rgb(228,69,69)">OBER</span><span class="white-font">RIFT</span>
+                            Find players anywhere, any game, instantly with <span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span>
                         </p>
                     </div>
                 </div>
@@ -116,7 +120,9 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" style="font-weight: bold">
                         <li><a href="#">Get the App</a></li>
+                        {{#if currentUser}}
                         <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
+                        {{/if}}
                         <li><a href="#">{{> loginButtons}}</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -127,6 +133,7 @@
         <h2>Dashboard</h2>
         <div class="container-fluid">
             <div class="jumbotron">
+                <h1>Hello, {{currentUser.username}}!</h1>
                 <h1>Hello, {{currentUser.username}}!</h1>
                 <p>This is your dahsboard</p>
                 <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
