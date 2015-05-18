@@ -32,7 +32,7 @@ if (Meteor.isClient) {
 
 }
 if (Meteor.isServer) {
-    console.log("Welcome, server to OBERift")
+    console.log("Welcome, server to OBERift");
 
     UserTable = new Meteor.Collection('Users'); // dp not use var
 
