@@ -77,20 +77,6 @@ div.panel {
     max-width: 900px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #login-dropdown-list {
     background-color: whitesmoke;
 }
@@ -104,9 +90,10 @@ div.panel {
     background-color: rgb(228,103,103);
     border: 0px;
 }
-#login-buttons .login-button, .accounts-dialog .login-button:hover{
+#login-buttons .login-button, .accounts-dialog .login-button{
     background-color: rgb(78,173,74);
 }
+
 #login-sign-in-link, #login-close-text {
     color: rgb(50,50,50);
 }
