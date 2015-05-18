@@ -1,4 +1,5 @@
 if (Meteor.isClient) {
+  UserList = new Mongo.collection('UserList');
   Router.map(function(){
     this.route('home',          {path: '/'});
     this.route('dashboard',     {path: 'dashboard'});
@@ -6,9 +7,23 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  Template.dashboard.currentUserName = function() {
-        return Meteor.user().username;
-  }
+  Template.dashboard.helpers({
+      currentUserName: function(){
+          return Meteor.user().username;
+      }
+  });
+
+  Template.dashboard.events({
+     'submit form-group': function(event){
+         event.preventDefault();
+         var game = event.target.gameTitle.value;
+         var playerName = event.target.gameUserName.value;
+         UserList.insert({
+             name: playerName,
+             game: game
+         });
+     }
+  });
 
   Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
       if(err) {
