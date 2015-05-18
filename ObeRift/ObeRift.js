@@ -6,8 +6,8 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  Meteor.call(getLoLAccount("Tiandi"));
-
+  Meteor.call(getLoLAccount, "Tiandi");
+  Meteor.call(sayHi;
 
 }
 if (Meteor.isServer) {
@@ -26,6 +26,11 @@ if (Meteor.isServer) {
                 var errorJson = JSON.parse(result.content);
                 throw new Meteor.Error(result.statusCode, errorJson.error);
             }
+        },
+
+        sayHi: function(){
+
+            console.log("Hey there asshole!");
         }
     });
 }
