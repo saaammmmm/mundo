@@ -6,6 +6,7 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
+
   Meteor.call(getLoLAccount, "Tiandi", function(err, respJson) {
       if(err) {
           window.alert("Error: " + err.reason);
@@ -17,13 +18,13 @@ if (Meteor.isClient) {
       }
   });
   Meteor.call(sayHi);
-
 }
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
 
     Meteor.methods({
         getLoLAccount: function(userName){
+            console.log("Fetching LoL informaion for: " + userName);
             var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
             var result = Meteor.http.get(url, {timeout: 30000});
             if(result.statusCode == 200){
@@ -35,9 +36,9 @@ if (Meteor.isServer) {
                 var errorJson = JSON.parse(result.content);
                 throw new Meteor.Error(result.statusCode, errorJson.error);
             }
+
         },
         sayHi: function(){
-
             console.log("Hey there asshole!");
         }
     });
