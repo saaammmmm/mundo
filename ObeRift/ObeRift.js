@@ -13,6 +13,14 @@ if (Meteor.isClient) {
           return Meteor.user().username;
       }
   });
+  Template.userGame.helpers({
+    gameTitle: function() {
+        return ObeUserList.game;
+    },
+    gameUsername: function() {
+        return ObeUserList.playerName;
+    }
+  });
 
   Template.dashboard.events({
      'submit form-group': function(event){
