@@ -21,7 +21,15 @@ if (Meteor.isClient) {
       }
   });
 
-}
+
+/**
+    here we are setting the config of Accounts UI to use UserNames instead of passwords.. duh
+*/
+Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+});
+
+} // This is the end of the client code
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
 
