@@ -78,8 +78,10 @@ div.panel {
 }
 
 #login-text-and-button {
-    background-color: rgb(228, 69, 69) !important;
+    background-color: rgb(228,103,103) !important;
+    border: 0px;
 }
+
 
 #login-dropdown-list {
     background-color: whitesmoke;
@@ -88,7 +90,9 @@ div.panel {
 #login-buttons .login-button, .accounts-dialog .login-button {
     background-color: rgb(50,50,50);
 }
-
+#login-buttons .login-button, .accounts-dialog .login-button:hover{
+    background-color: rgb(78,173,74);
+}
 #login-sign-in-link, #login-close-text {
     color: rgb(50,50,50);
 }
