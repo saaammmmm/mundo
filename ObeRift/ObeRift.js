@@ -6,8 +6,8 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  UserList = new Mongo.collection('UserList');
-    
+  UserList = new Meteor.collection('UserList');
+
   Template.dashboard.helpers({
       currentUserName: function(){
           return Meteor.user().username;
