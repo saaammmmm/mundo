@@ -82,7 +82,12 @@ div.panel {
     border: 0px;
 }
 
-
+#login-buttons .configure-button {
+    background-color: rgb(50,50,50);
+}
+#login-buttons .configure-button:hover {
+    background-color: rgb(228,103,103) !important;
+}
 #login-dropdown-list {
     background-color: whitesmoke;
 }
