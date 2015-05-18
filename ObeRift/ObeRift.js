@@ -1,40 +1,26 @@
-// Create the table
-  
-
-
-
 if (Meteor.isClient) {
-  /*Template.home.autoredirect = function(){
-    Router.go('join');
-  }*/
-
-  // Discern what the hell we are doing
-  console.log("Creating users table");
-  UserTable = new Meteor.Collection('Users'); // Do not user var
-  console.log("Users table created");
-  console.log("Welcome, client to OBERift")
-
-
   Router.map(function(){
     this.route('home',          {path: '/'});
     this.route('dashboard',     {path: 'dashboard'});
   }); // end of Router.map()...
 
-/*
-    UserTable.insert({
-        name: "Sam",
-        rank: 9000
+  userStats = new Meteor.collection('userStats');
 
-    }); // End if insert...
-    
-  UserTable.find().fetch();
-*/
 
 }
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
 
-    UserTable = new Meteor.Collection('Users'); // dp not use var
-
-
+    Meteor.http.get("https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/Tiandi?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5", function(error, result){
+        if(error){
+            console.log("Error");
+        }
+        else {
+            console.log("http get SUCCESS");
+            if(result.statusCode === 200) {
+                console.log('Status code = 200!');
+                console.log(result.content);
+            }
+        }
+    });
 }
