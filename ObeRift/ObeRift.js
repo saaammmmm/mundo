@@ -6,6 +6,9 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
+  Template.dashboard.currentUserName = function() {
+        return Meteor.userId();
+  }
 
   Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
       if(err) {
