@@ -4,7 +4,7 @@ if (Meteor.isClient) {
     this.route('dashboard',     {path: 'dashboard'});
   }); // end of Router.map()...
 
-  userStats = new Meteor.collection('userStats');
+  //userStats = new Meteor.collection('userStats');
 
 
 }
