@@ -17,7 +17,8 @@ if (Meteor.isClient) {
           Session.set("recentTweets",respJson);
       }
   });
-  Meteor.call(sayHi);
+  Meteor.call('getLoLAccounts', "Gnarcore");
+  Meteor.call('sayHi');
 }
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
