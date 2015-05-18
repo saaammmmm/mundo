@@ -7,7 +7,7 @@ if (Meteor.isClient) {
   //userStats = new Meteor.collection('userStats');
 
   Meteor.call(getLoLAccount, "Tiandi");
-  Meteor.call(sayHi;
+  Meteor.call(sayHi);
 
 }
 if (Meteor.isServer) {
