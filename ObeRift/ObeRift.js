@@ -33,6 +33,7 @@ if (Meteor.isClient) {
             name: playerName,
             game: game
          });
+         console.log("Added game");
      }
   });
 
