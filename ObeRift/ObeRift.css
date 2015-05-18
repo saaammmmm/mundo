@@ -77,23 +77,32 @@ div.panel {
     max-width: 900px;
 }
 
-#login-text-and-button {
-    background-color: rgb(228,103,103) !important;
-    border: 0px;
-}
 
-#login-buttons .configure-button {
-    background-color: rgb(50,50,50);
-}
-#login-buttons .configure-button:hover {
-    background-color: rgb(228,103,103) !important;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 #login-dropdown-list {
     background-color: whitesmoke;
 }
 
-#login-buttons .login-button, .accounts-dialog .login-button {
+.login-text-and-button{
     background-color: rgb(50,50,50);
+    border: 0px;
+}
+
+.login-text-and-button:hover{
+    background-color: rgb(228,103,103);
+    border: 0px;
 }
 #login-buttons .login-button, .accounts-dialog .login-button:hover{
     background-color: rgb(78,173,74);
@@ -102,5 +111,8 @@ div.panel {
     color: rgb(50,50,50);
 }
 
+#login-buttons-password {
+    background-color: rgb(78,173,74);
+}
 
 
