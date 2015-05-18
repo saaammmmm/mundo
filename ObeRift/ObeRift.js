@@ -17,7 +17,7 @@ if (Meteor.isClient) {
           Session.set("recentTweets",respJson);
       }
   });
-  Meteor.call('getLoLAccounts', "Gnarcore");
+  Meteor.call('getLoLAccount', "Gnarcore");
   Meteor.call('sayHi');
 }
 if (Meteor.isServer) {
