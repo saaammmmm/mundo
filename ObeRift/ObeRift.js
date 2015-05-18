@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  UserList = new Meteor.collection('UserList');
+  ObeUserList = new Mongo.collection('ObeUserList');
 
   Template.dashboard.helpers({
       currentUserName: function(){
@@ -19,7 +19,7 @@ if (Meteor.isClient) {
          event.preventDefault();
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
-         UserList.insert({
+         ObeUserList.insert({
              name: playerName,
              game: game
          });
