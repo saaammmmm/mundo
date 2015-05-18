@@ -9,16 +9,16 @@ if (Meteor.isClient) {
   //ObeUserList = new Mongo.collection('ObeUserList');
 
   Template.dashboard.helpers({
-      currentUserName: function(){
+      'currentUserName': function(){
           return Meteor.user().username;
       }
   });
   Template.userGame.helpers({
-    gameTitle: function() {
-        return ObeUserList.game;
+    'gameTitle': function() {
+        return ObeUserList.find();
     },
-    gameUsername: function() {
-        return ObeUserList.playerName;
+    'gameUsername': function() {
+        return ObeUserList.find();
     }
   });
 
