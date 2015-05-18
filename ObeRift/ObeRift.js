@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  //ObeUserList = new Mongo.collection('ObeUserList');
+  ObeUserList = new Mongo.collection('ObeUserList');
 
   Template.dashboard.helpers({
       'currentUserName': function(){
@@ -15,9 +15,6 @@ if (Meteor.isClient) {
   });
   Template.userGame.helpers({
     'gameTitle': function() {
-        return ObeUserList.find();
-    },
-    'gameUsername': function() {
         return ObeUserList.find();
     }
   });
