@@ -1,5 +1,4 @@
 if (Meteor.isClient) {
-  UserList = new Mongo.collection('UserList');
   Router.map(function(){
     this.route('home',          {path: '/'});
     this.route('dashboard',     {path: 'dashboard'});
@@ -7,6 +6,8 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
+  UserList = new Mongo.collection('UserList');
+    
   Template.dashboard.helpers({
       currentUserName: function(){
           return Meteor.user().username;
