@@ -5,9 +5,12 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
   //userStats = new Meteor.collection('userStats');
-
-  ObeUserList = new Mongo.collection('ObeUserList');
-
+  try{
+    ObeUserList = new Mongo.collection('ObeUserList');
+  }
+  catch (err) {
+    console.log("Annoying error on ObeUserList = new Mongo.collection('ObeUserList');");
+  }
   Template.dashboard.helpers({
       'currentUserName': function(){
           return Meteor.user().username;
