@@ -6,7 +6,16 @@ if (Meteor.isClient) {
 
   //userStats = new Meteor.collection('userStats');
 
-  Meteor.call(getLoLAccount, "Tiandi");
+  Meteor.call(getLoLAccount, "Tiandi", function(err, respJson) {
+      if(err) {
+          window.alert("Error: " + err.reason);
+          console.log("error occured on receiving data on server. ", err );
+      } else {
+          console.log("respJson: ", respJson);
+          //window.alert(respJson.length + ' tweets received.');
+          Session.set("recentTweets",respJson);
+      }
+  });
   Meteor.call(sayHi);
 
 }
@@ -27,7 +36,6 @@ if (Meteor.isServer) {
                 throw new Meteor.Error(result.statusCode, errorJson.error);
             }
         },
-
         sayHi: function(){
 
             console.log("Hey there asshole!");
