@@ -59,20 +59,39 @@ div.panel {
 .red-column {
     background-color: rgb(228,103,103);
     background-size: cover;
-    height: 65vh;
+    height: 98vh;
 }
 
 .green-column {
     background-color: rgb(96, 227,96);
     background-size: cover;
-    height: 65vh;
+    height: 98vh;
 }
 
 .secondary-column {
-    height: 65vh;
+    height: 98vh;
     background-color: rgba(245, 245, 245, 0.08);
 }
 
 .nav-size {
     max-width: 900px;
 }
+
+#login-text-and-button {
+    background-color: rgb(228, 69, 69) !important;
+}
+
+#login-dropdown-list {
+    background-color: whitesmoke;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    background-color: rgb(50,50,50);
+}
+
+#login-sign-in-link, #login-close-text {
+    color: rgb(50,50,50);
+}
+
+
+
