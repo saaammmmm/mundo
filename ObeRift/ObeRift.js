@@ -17,11 +17,13 @@ if (Meteor.isClient) {
   Template.dashboard.events({
      'submit form-group': function(event){
          event.preventDefault();
+         var obeUserName = Meteor.user().username;
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
          ObeUserList.insert({
-             name: playerName,
-             game: game
+            obeUserName: obeUserName,
+            name: playerName,
+            game: game
          });
      }
   });
