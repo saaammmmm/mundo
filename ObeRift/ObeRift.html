@@ -91,60 +91,7 @@
 </template>
 
 
-<template name="join">
-    <head>
-        <title>OBERIFT</title>
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
-    </head>
-    <body>
-         <nav class="navbar navbar-default">
-            <div class="container-fluid nav-size">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{pathFor 'home'}}" style="font-size: 1.8em"><span style="color: rgb(228,69,69)">OBE</span><span class="outlined-font">RIFT</span></a>
-                </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right" style="font-weight: bold">
-                        <li><a href="#">Get the App</a></li>
-                        <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
-                        <li><a href="#">{{> loginButtons}}</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
-        </nav>
-        <h1><span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span></h1>
-        <h2>Bringing gamers together</h2>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Check me out
-            </label>
-          </div>
-          <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </body>
-</template>
 
 <template name="dashboard">
     <head>
@@ -176,7 +123,14 @@
             </div><!-- /.container-fluid -->
         </nav>
         <h1><span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span></h1>
+        <!-- Begin the dashboard code -->
         <h2>Dashboard</h2>
-       
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>Hello, {{currentUser.username}}!</h1>
+                <p>This is your dahsboard</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+        </div>
     </body>
 </template>
