@@ -17,8 +17,7 @@ if (Meteor.isClient) {
           Session.set("recentTweets",respJson);
       }
   });
-  Meteor.call('getLoLAccount', "Gnarcore");
-  Meteor.call('sayHi');
+
 }
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
@@ -39,8 +38,5 @@ if (Meteor.isServer) {
             }
 
         },
-        sayHi: function(){
-            console.log("Hey there asshole!");
-        }
     });
 }
