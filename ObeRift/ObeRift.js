@@ -1,3 +1,5 @@
+ ObeUserList = new Mongo.collection('ObeUserList');
+
 if (Meteor.isClient) {
   Router.map(function(){
     this.route('home',          {path: '/'});
@@ -5,17 +7,10 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
   //userStats = new Meteor.collection('userStats');
-  try{
-    ObeUserList = new Mongo.collection('ObeUserList');
-  }
-  catch (err) {
-    console.log("Annoying error on ObeUserList = new Mongo.collection('ObeUserList');");
-  }
-  Template.dashboard.helpers({
-      'currentUserName': function(){
-          return Meteor.user().username;
-      }
-  });
+ 
+   
+  
+
   Template.userGame.helpers({
     'gameTitle': function() {
         return ObeUserList.find().fetch();
