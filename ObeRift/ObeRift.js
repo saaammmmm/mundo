@@ -1,5 +1,9 @@
- ObeUserList = new Mongo.collection('ObeUserList');
-
+try {
+ObeUserList = new Mongo.collection('ObeUserList');
+}
+catch (err) {
+  console.log("Error in ObeUserList: " + err); 
+}
 if (Meteor.isClient) {
   Router.map(function(){
     this.route('home',          {path: '/'});
