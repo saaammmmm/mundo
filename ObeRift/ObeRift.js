@@ -13,7 +13,12 @@ if (Meteor.isClient) {
   }
   Template.dashboard.helpers({
       'currentUserName': function(){
+        if (user != undefined) {
           return Meteor.user().username;
+        }
+        else {
+          console.log("User is not defined yet");
+        }
       }
   });
   Template.userGame.helpers({
