@@ -29,7 +29,7 @@ if (Meteor.isClient) {
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
 
-         console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
+         alert("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
          ObeUserList.insert({
             obeUserName: obeUserName,
             name: playerName,
