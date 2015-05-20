@@ -13,7 +13,6 @@ if (Meteor.isClient) {
  
    
   
-ObeUserList = new Mongo.Collection('ObeUserList');
 
   Template.userGame.helpers({
     'gameTitle': function() {
