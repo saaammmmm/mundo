@@ -14,9 +14,9 @@ if (Meteor.isClient) {
    
   
 
-  Template.userGame.helpers({
-    'gameTitle': function() {
-        return ObeUserList.find().fetch();
+  Template.ObeUserList.helpers({
+    ObeUserList: function() {
+        return ObeUserList.find();
     }
   });
 

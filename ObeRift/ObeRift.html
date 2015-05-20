@@ -140,11 +140,11 @@
                   <h3>Your Game Info</h3>
                 </header>
 
-                <ul>
                 
-                    {{> gameTitle}}
+                
+                    {{> ObeUserList}}
                  
-                </ul>
+                
               </div>
                 <form class="form-inline">
                     <div class="form-group">
@@ -162,8 +162,12 @@
     </body>
 </template>
 
-<template name="userGame">
-  <li>{{gameTitle}}</li>
- 
+<template name="ObeUserList">
+    <ul>
+        {#each ObeUserList}
+        <li>{{game}}</li>
+        <li>{{name}}</li>
+        {/each}
+    </ul>
   <!--li>{{gameStatsText}}</li-->
 </template>
