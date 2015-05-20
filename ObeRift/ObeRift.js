@@ -21,7 +21,7 @@ if (Meteor.isClient) {
   });
 
   Template.dashboard.events({
-     "submit .form-group": function(event){
+     "submit .form-inline": function(event){
          event.preventDefault();
          var obeUserName = Meteor.user().username;
          var game = event.target.gameTitle.value;
