@@ -21,7 +21,7 @@ if (Meteor.isClient) {
   });
 
   Template.dashboard.events({
-     '#submitNewGame': function(event){
+     "submit .form-group": function(event){
          event.preventDefault();
          var obeUserName = Meteor.user().username;
          var game = event.target.gameTitle.value;
