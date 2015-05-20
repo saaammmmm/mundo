@@ -27,13 +27,14 @@ if (Meteor.isClient) {
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
 
-         alert("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
+         console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
          ObeUserList.insert({
             obeUserName: obeUserName,
             name: playerName,
             game: game
          });
-         event.target.text.value = "";
+         event.target.gameTitle.value = "";
+         event.target.gameUserName.value = "";
          console.log("Added game");
      }
   });
