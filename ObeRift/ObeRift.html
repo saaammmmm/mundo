@@ -140,10 +140,10 @@
                   <h3>Your Game Info</h3>
                 </header>
 
-                
+                <table class="table">
                 
                     {{> ObeUserList}}
-                 
+                 </table>
                 
               </div>
                 <form class="form-inline">
@@ -165,10 +165,10 @@
 <template name="ObeUserList">
     
         {{#each ObeUserList}}
-        <ul>
-        <li>{{game}}</li>
-        <li>{{name}}</li>
-        </ul>
+        <tr>
+        <td>{{game}}</td>
+        <td>{{name}}</td>>
+        </tr>
         {{/each}}
     
   <!--li>{{gameStatsText}}</li-->
