@@ -163,16 +163,17 @@
 </template>
 
 <template name="ObeUserList">
-    <th>
-        <td>Game</td>
-        <td>In-Game Username</td>
-    </th>
-        {{#each ObeUserList}}
-        <tr>
-        <td>{{game}}</td>
-        <td>{{name}}</td>
-        </tr>
-        {{/each}}
+
+    <tr>
+        <th>Game</th>
+        <th>In-Game Username</th>
+    </tr>
+    {{#each ObeUserList}}
+    <tr>
+    <td>{{game}}</td>
+    <td>{{name}}</td>
+    </tr>
+    {{/each}}
     
   <!--li>{{gameStatsText}}</li-->
 </template>
