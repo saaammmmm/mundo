@@ -13,28 +13,19 @@ if (Meteor.isClient) {
   }
   Template.dashboard.helpers({
       'currentUserName': function(){
-        if (user != undefined) {
           return Meteor.user().username;
-        }
-        else {
-          console.log("User is not defined yet");
-        }
       }
   });
   Template.userGame.helpers({
     'gameTitle': function() {
-      if (ObeUserList != undefined) {
         return ObeUserList.find().fetch();
-      }
     }
   });
 
   Template.dashboard.events({
      'submit form-group': function(event){
          event.preventDefault();
-         if (user != undefined && obeUserName != undefined) {
-            var obeUserName = Meteor.user().username;
-         
+         var obeUserName = Meteor.user().username;
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
 
@@ -45,7 +36,6 @@ if (Meteor.isClient) {
             game: game
          });
          console.log("Added game");
-         }
      }
   });
 
