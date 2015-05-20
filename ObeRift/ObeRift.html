@@ -37,7 +37,7 @@
                         <h2>Bringing gamers together</h2>
                         <a class="btn btn-success" href="{{pathFor 'join'}}" role="button">GET STARTED</a>
                         {{#if currentUser}}
-                        <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
+                        <a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a>
                         {{/if}}
                     </div>
                     <div class="col-md-4 white-font">
@@ -121,7 +121,7 @@
                     <ul class="nav navbar-nav navbar-right" style="font-weight: bold">
                         <li><a href="#">Get the App</a></li>
                         {{#if currentUser}}
-                        <li><a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a></li>
+                        <a class="btn btn-default" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a>
                         {{/if}}
                         <li><a href="#">{{> loginButtons}}</a></li>
                     </ul>
@@ -147,13 +147,13 @@
                 </ul>
               </div>
                 <form class="form-inline">
-                <div class="form-group">
-                    <label for="gameTitle"></label>
-                    <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="game title">
+                    <div class="form-group">
+                        <label for="gameTitle"></label>
+                        <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="game title">
                     </div>
                     <div class="form-group">
-                    <label for="gameUserName"></label>
-                    <input type="text" class="form-control" id="gameUserName" name="gameUserName" placeholder="in-game username">
+                        <label for="gameUserName"></label>
+                        <input type="text" class="form-control" id="gameUserName" name="gameUserName" placeholder="in-game username">
                     </div>
                     <button type="submit" class="btn btn-default">Add to your stats</button>
                 </form>

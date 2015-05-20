@@ -18,7 +18,7 @@ if (Meteor.isClient) {
   });
   Template.userGame.helpers({
     'gameTitle': function() {
-        return ObeUserList.find();
+        return ObeUserList.find().fetch();
     }
   });
 
@@ -28,6 +28,8 @@ if (Meteor.isClient) {
          var obeUserName = Meteor.user().username;
          var game = event.target.gameTitle.value;
          var playerName = event.target.gameUserName.value;
+
+         console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
          ObeUserList.insert({
             obeUserName: obeUserName,
             name: playerName,
