@@ -28,9 +28,9 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.created = function(){
         var League = ObeUserList.find({game: 'League of Legends'});
-        console.log(League);
+        console.log("Data:" + JSON.stringify(League));
         League.forEach(function(user){
-            Meteor.call('getLoLAccount', user.name, function(err, respJson, user) {
+            Meteor.call('getLoLAccount', user.name, function(err, respJson) {
                 if(err) {
                     window.alert("Error: " + err.reason);
                     console.log("error occured on receiving data on server. ", err );
@@ -42,7 +42,7 @@ if (Meteor.isClient) {
                         IGN: respJson.username.name,
                         level: respJson.username.summonerLevel
                     });
-                    console.log(ObeGameList);
+                    console.log("ObeGameList:" + ObeGameList);
                 }
             });
         });
