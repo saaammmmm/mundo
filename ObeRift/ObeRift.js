@@ -11,8 +11,17 @@ if (Meteor.isClient) {
     this.route('teams',         {path: 'teams'});
   }); // end of Router.map()...
 
-  //userStats = new Meteor.collection('userStats');
-  
+
+    Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
+        if(err) {
+            window.alert("Error: " + err.reason);
+            alert("error occured on receiving data on server. ", err );
+        } else {
+            console.log(respJson.Tiandi.name);
+            console.log(respJson.Tiandi.SummonerLevel);
+            console.log(respJson)
+        }
+    });
 
   Template.ObeUserList.helpers({
     ObeUserList: function() {
@@ -27,26 +36,10 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.helpers({
         IGN: function() {
-            Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
-                if(err) {
-                    window.alert("Error: " + err.reason);
-                    alert("error occured on receiving data on server. ", err );
-                } else {
-                    console.log(respJson.Tiandi.name);
-                    return respJson.Tiandi.name;
-                }
-            });
+            return "Tiandi"
         },
         SummonerLevel: function() {
-            Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
-                if(err) {
-                    window.alert("Error: " + err.reason);
-                    alert("error occured on receiving data on server. ", err );
-                } else {
-                    console.log(respJson.Tiandi.summonerLevel);
-                    return respJson.Tiandi.summonerLevel;
-                }
-            });
+            return "30"
         }
     });
 
