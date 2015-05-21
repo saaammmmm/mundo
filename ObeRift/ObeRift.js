@@ -12,14 +12,15 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
 
-    Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
+    Meteor.call('getLoLAccount', 'Tiandi', function(err, respJson) {
         if(err) {
             window.alert("Error: " + err.reason);
-            alert("error occured on receiving data on server. ", err );
+            alert("error occured on receiving data on server. ", err);
         } else {
             console.log(respJson.Tiandi.name);
             console.log(respJson.Tiandi.SummonerLevel);
             console.log(respJson)
+            return respJson;
         }
     });
 
@@ -82,10 +83,8 @@ if (Meteor.isServer) {
             var result = Meteor.http.get(url, {timeout: 30000});
             if(result.statusCode == 200){
                 var response = JSON.parse(result.content);
-                console.log(response);
                 return response;
             } else {
-                console.log("Response issue: ", result.statusCode);
                 var errorJson = JSON.parse(result.content);
                 throw new Meteor.Error(result.statusCode, errorJson.error);
             }
