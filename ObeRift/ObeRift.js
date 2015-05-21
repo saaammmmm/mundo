@@ -1,6 +1,7 @@
 
 ObeUserList = new Mongo.Collection('ObeUserList');
 
+ObeRiftTeams = new Mongo.Collection('ObeRiftTeams');
 
 if (Meteor.isClient) {
 
@@ -19,6 +20,12 @@ if (Meteor.isClient) {
         return ObeUserList.find();
     }
   });
+    Template.ObeRiftTeams.helpers({
+    ObeRiftTeams: function() {
+        return ObeRiftTeams.find();
+    }
+  });
+
 
   Template.dashboard.events({
      "submit .form-inline": function(event){
