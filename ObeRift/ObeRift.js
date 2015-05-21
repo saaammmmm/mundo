@@ -55,11 +55,11 @@ if (Meteor.isClient) {
   });
 
   Template.GameStatistics.helpers({
-      getIGN: function() {
-          return Session.get(LoLAccont.name);
+      IGN: function() {
+          return Session.get(LolAccount.name);
       },
-      getSummonerLevel: function() {
-          return Session.get(LoLAccount.summonerLevel);
+      SummonerLevel: function() {
+          return Session.get(LolAccount.summonerLevel);
       }
   });
 
