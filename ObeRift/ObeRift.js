@@ -12,16 +12,6 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
   //userStats = new Meteor.collection('userStats');
-
-    Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
-        if(err) {
-            window.alert("Error: " + err.reason);
-            alert("error occured on receiving data on server. ", err );
-        } else {
-            console.log(respJson);
-            Session.set("LolAccount", respJson);
-        }
-    });
   
 
   Template.ObeUserList.helpers({
@@ -34,6 +24,23 @@ if (Meteor.isClient) {
         return ObeRiftTeams.find();
     }
   });
+
+    Template.GameStatistics.helpers({
+        IGN: function() {
+            Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
+                if(err) {
+                    window.alert("Error: " + err.reason);
+                    alert("error occured on receiving data on server. ", err );
+                } else {
+                    console.log(respJson.name);
+                    return respJson.name;
+                }
+            });
+        },
+        SummonerLevel: function() {
+            return Session.get(LolAccount.summonerLevel);
+        }
+    });
 
 
   Template.dashboard.events({
@@ -54,16 +61,6 @@ if (Meteor.isClient) {
          console.log("Added game");
      }
   });
-
-  Template.GameStatistics.helpers({
-      IGN: function() {
-          return Session.get(LolAccount.name);
-      },
-      SummonerLevel: function() {
-          return Session.get(LolAccount.summonerLevel);
-      }
-  });
-
 
 
 /**
