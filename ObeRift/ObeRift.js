@@ -32,8 +32,8 @@ if (Meteor.isClient) {
             } else {
                 console.log("respJson: ", respJson);
                 //window.alert(respJson.length + ' tweets received.');
-                console.log(respJson.tiandi.name);
-                Session.set("summonerLevel", respJson.summonerLevel)
+                Session.set('IGN', respJson.tiandi.name);
+                Session.set("summonerLevel", respJson.tiandi.summonerLevel)
             }
         });
 
@@ -83,7 +83,7 @@ if (Meteor.isServer) {
     Meteor.methods({
         'getLoLAccount' : function(userName){
             console.log("Fetching LoL informaion for: " + userName);
-            var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
+            var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName.toLowerCase() + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
             var result = Meteor.http.get(url, {timeout:30000});
             if(result.statusCode==200) {
                 var respJson = JSON.parse(result.content);
