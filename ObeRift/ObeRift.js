@@ -32,7 +32,7 @@ if (Meteor.isClient) {
             } else {
                 console.log("respJson: ", respJson);
                 //window.alert(respJson.length + ' tweets received.');
-                console.log(respJson.name);
+                console.log(respJson.tiandi.name);
                 Session.set("summonerLevel", respJson.summonerLevel)
             }
         });
