@@ -3,6 +3,8 @@ ObeUserList = new Mongo.Collection('ObeUserList');
 
 ObeRiftTeams = new Mongo.Collection('ObeRiftTeams');
 
+ObeGameList = new Mongo.Collection('ObeGameList');
+
 if (Meteor.isClient) {
 
   Router.map(function(){
@@ -25,26 +27,28 @@ if (Meteor.isClient) {
   });
 
     Template.GameStatistics.created = function(){
-        Meteor.call('getLoLAccount', 'Tiandi', function(err, respJson) {
-            if(err) {
-                window.alert("Error: " + err.reason);
-                console.log("error occured on receiving data on server. ", err );
-            } else {
-                console.log("respJson: ", respJson);
-                //window.alert(respJson.length + ' tweets received.');
-                Session.set('IGN', respJson.tiandi.name);
-                Session.set("summonerLevel", respJson.tiandi.summonerLevel)
-            }
+        var League = ObeUserList.find({game: 'League of Legends'});
+        League.forEach(function(user){
+            Meteor.call('getLoLAccount', user.name, function(err, respJson, user) {
+                if(err) {
+                    window.alert("Error: " + err.reason);
+                    console.log("error occured on receiving data on server. ", err );
+                } else {
+                    var username = user.name.toLowerCase();
+                    console.log("respJson: ", respJson);
+                    //window.alert(respJson.length + ' tweets received.');
+                    ObeGameList.insert({
+                        IGN: respJson.username.name,
+                        level: respJson.username.summonerLevel
+                    });
+                }
+            });
         });
-
     };
 
     Template.GameStatistics.helpers({
-        IGN: function() {
-            return Session.get('IGN');
-        },
-        SummonerLevel: function() {
-            return Session.get('summonerLevel');
+        stats: function() {
+            return ObeGameList.find();
         }
     });
 

@@ -199,10 +199,12 @@
             <th>Username</th>
             <th>Summoner Level</th>
         </tr>
+        {{#each stats}}
         <tr>
             <td>{{IGN}}</td>
-            <td>{{SummonerLevel}}</td>
+            <td>{{level}}</td>
         </tr>
+        {{/each}}
     </table>
 </template>
 
