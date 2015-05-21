@@ -32,7 +32,7 @@ if (Meteor.isClient) {
             } else {
                 console.log("respJson: ", respJson);
                 //window.alert(respJson.length + ' tweets received.');
-                Session.set("IGN",respJson.name);
+                console.log(respJson.name);
                 Session.set("summonerLevel", respJson.summonerLevel)
             }
         });
