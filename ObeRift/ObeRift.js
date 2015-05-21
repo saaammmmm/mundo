@@ -32,13 +32,21 @@ if (Meteor.isClient) {
                     window.alert("Error: " + err.reason);
                     alert("error occured on receiving data on server. ", err );
                 } else {
-                    console.log(respJson.name);
-                    return respJson.name;
+                    console.log(respJson.Tiandi.name);
+                    return respJson.Tiandi.name;
                 }
             });
         },
         SummonerLevel: function() {
-            return Session.get(LolAccount.summonerLevel);
+            Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
+                if(err) {
+                    window.alert("Error: " + err.reason);
+                    alert("error occured on receiving data on server. ", err );
+                } else {
+                    console.log(respJson.Tiandi.summonerLevel);
+                    return respJson.Tiandi.summonerLevel;
+                }
+            });
         }
     });
 
