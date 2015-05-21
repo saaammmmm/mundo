@@ -85,11 +85,7 @@ if (Meteor.isServer) {
             if(result.statusCode == 200){
                 var response = JSON.parse(result.content);
                 console.log(response);
-                var LoLdata = {
-                    name: response.name,
-                    summonerLevel: response.summonerLevel
-                    };
-                return LoLdata;
+                return response;
             } else {
                 console.log("Response issue: ", result.statusCode);
                 var errorJson = JSON.parse(result.content);
