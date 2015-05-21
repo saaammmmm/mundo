@@ -28,6 +28,7 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.created = function(){
         var League = ObeUserList.find({game: 'League of Legends'});
+        console.log(League);
         League.forEach(function(user){
             Meteor.call('getLoLAccount', user.name, function(err, respJson, user) {
                 if(err) {
@@ -41,6 +42,7 @@ if (Meteor.isClient) {
                         IGN: respJson.username.name,
                         level: respJson.username.summonerLevel
                     });
+                    console.log(ObeGameList);
                 }
             });
         });
