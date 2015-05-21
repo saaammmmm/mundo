@@ -18,7 +18,8 @@ if (Meteor.isClient) {
             window.alert("Error: " + err.reason);
             alert("error occured on receiving data on server. ", err );
         } else {
-            Session.set("LolAccount",respJson);
+            console.log(respJson);
+            Session.set("LolAccount", respJson);
         }
     });
   
