@@ -158,7 +158,8 @@
                 
                     {{> ObeUserList}}
                  </table>
-                
+
+                 {{> GameStatistics}}
               </div>
                 <form class="form-inline">
                     <div class="form-group">
@@ -176,18 +177,6 @@
     </body>
 </template>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <template name="ObeUserList">
 
     <tr>
@@ -202,6 +191,19 @@
     {{/each}}
     
   <!--li>{{gameStatsText}}</li-->
+</template>
+
+<template name="GameStatistics">
+    <table class="table">
+        <th>
+            <tr>Username</tr>
+            <tr>Summoner Level</tr>
+        </th>
+        <tr>
+            <td>{{getIGN}}</td>
+            <td>{{getSummonerLevel}}</td>
+        </tr>
+    </table>
 </template>
 
 

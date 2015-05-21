@@ -12,8 +12,15 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
   //userStats = new Meteor.collection('userStats');
- 
-   
+
+    Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
+        if(err) {
+            window.alert("Error: " + err.reason);
+            alert("error occured on receiving data on server. ", err );
+        } else {
+            Session.set("LolAccount",respJson);
+        }
+    });
   
 
   Template.ObeUserList.helpers({
@@ -47,16 +54,15 @@ if (Meteor.isClient) {
      }
   });
 
-  Meteor.call('getLoLAccount', "Tiandi", function(err, respJson) {
-      if(err) {
-          window.alert("Error: " + err.reason);
-          console.log("error occured on receiving data on server. ", err );
-      } else {
-          console.log("respJson: ", respJson);
-          //window.alert(respJson.length + ' tweets received.');
-          Session.set("recentTweets",respJson);
+  Template.GameStatistics.helpers({
+      getIGN: function() {
+          return Session.get(LoLAccont.name);
+      },
+      getSummonerLevel: function() {
+          return Session.get(LoLAccount.summonerLevel);
       }
   });
+
 
 
 /**
@@ -78,7 +84,11 @@ if (Meteor.isServer) {
             if(result.statusCode == 200){
                 var response = JSON.parse(result.content);
                 console.log(response);
-                return response;
+                var LoLdata = {
+                    name: response.name,
+                    summonerLevel: response.summonerLevel
+                    };
+                return LoLdata;
             } else {
                 console.log("Response issue: ", result.statusCode);
                 var errorJson = JSON.parse(result.content);
