@@ -28,7 +28,7 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.created = function(){
         var League = ObeUserList.find({game: 'League of Legends'});
-        console.log("Data:" + JSON.stringify(League));
+        console.log("Data:" + League);
         League.forEach(function(user){
             Meteor.call('getLoLAccount', user.name, function(err, respJson) {
                 if(err) {
