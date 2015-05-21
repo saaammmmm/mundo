@@ -12,9 +12,6 @@ if (Meteor.isClient) {
   }); // end of Router.map()...
 
 
-    Meteor.call('getLoLAccount', 'Tiandi', function(respJson) {
-        console.log(respJson);
-    });
 
   Template.ObeUserList.helpers({
     ObeUserList: function() {
@@ -27,12 +24,27 @@ if (Meteor.isClient) {
     }
   });
 
+    Template.GameStatistics.created = function(){
+        Meteor.call('getLoLAccount', 'Tiandi', function(err, respJson) {
+            if(err) {
+                window.alert("Error: " + err.reason);
+                console.log("error occured on receiving data on server. ", err );
+            } else {
+                console.log("respJson: ", respJson);
+                //window.alert(respJson.length + ' tweets received.');
+                Session.set("IGN",respJson.name);
+                Session.set("summonerLevel", respJson.summonerLevel)
+            }
+        });
+
+    };
+
     Template.GameStatistics.helpers({
         IGN: function() {
-            return "Tiandi"
+            return Session.get('IGN');
         },
         SummonerLevel: function() {
-            return "30"
+            return Session.get('summonerLevel');
         }
     });
 
@@ -72,17 +84,17 @@ if (Meteor.isServer) {
         'getLoLAccount' : function(userName){
             console.log("Fetching LoL informaion for: " + userName);
             var url = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
-            var response = Meteor.HTTP.get(url, {timeout:30000});
-            if(response.statusCode == 200){
-                var data = {
-                    name: response.data.name,
-                    summonerLevel: response.data.summonerLevel
-                };
-                console.log(data);
-                return data;
+            var result = Meteor.http.get(url, {timeout:30000});
+            if(result.statusCode==200) {
+                var respJson = JSON.parse(result.content);
+                console.log("response received.");
+                return respJson;
             } else {
-                console.log(response.error);
+                console.log("Response issue: ", result.statusCode);
+                var errorJson = JSON.parse(result.content);
+                throw new Meteor.Error(result.statusCode, errorJson.error);
             }
+
 
         }
 
