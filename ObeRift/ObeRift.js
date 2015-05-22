@@ -25,7 +25,7 @@ if (Meteor.isClient) {
         return ObeRiftTeams.find();
     }
   });
-
+    
     Template.GameStatistics.created = function(){
         var League = ObeUserList.find({game: 'League of Legends'});
         console.log("Data:" + League);
@@ -75,7 +75,7 @@ if (Meteor.isClient) {
   });
 
 
-/**
+/** 
     here we are setting the config of Accounts UI to use UserNames instead of passwords.. duh
 */
 Accounts.ui.config({
