@@ -17,7 +17,7 @@ if (Meteor.isClient) {
 
   Template.ObeUserList.helpers({
     ObeUserList: function() {
-        return ObeUserList.find();
+        return ObeUserList.find({obeUserName: Meteor.user().username});
     }
   });
     Template.ObeRiftTeams.helpers({
@@ -50,7 +50,7 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.helpers({
         stats: function() {
-            return ObeGameList.find({obeUserName: Meteor.user().username});
+            return ObeGameList.find();
         }
     });
 
