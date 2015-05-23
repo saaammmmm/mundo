@@ -50,7 +50,7 @@ if (Meteor.isClient) {
 
     Template.GameStatistics.helpers({
         stats: function() {
-            return ObeGameList.find();
+            return ObeGameList.find({obeUserName: Meteor.user().username});
         }
     });
 
