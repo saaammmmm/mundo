@@ -4,9 +4,9 @@ ObeUserList = new Mongo.Collection('ObeUserList');
 ObeRiftTeams = new Mongo.Collection('ObeRiftTeams');
 
 ObeGameList = new Mongo.Collection('ObeGameList');
-
+require('bootstrap');
 if (Meteor.isClient) {
-
+  require('bootstrap');
   Router.map(function(){
     this.route('home',          {path: '/'});
     this.route('dashboard',     {path: 'dashboard'});
@@ -85,7 +85,7 @@ Accounts.ui.config({
 } // This is the end of the client code
 if (Meteor.isServer) {
     console.log("Welcome, server to OBERift");
-
+    require('bootstrap');
     Meteor.methods({
         'getLoLAccount' : function(userName){
             console.log("Fetching LoL informaion for: " + userName);
