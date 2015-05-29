@@ -18,36 +18,27 @@
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
                 </div>
-                
+
                 <div class="container">
                     <header>
                         <h3>OBERIFT Teams</h3>
                     </header>
-
                     <table class="table">
-
-                        {{> ObeRiftTeams}}
+                        <tr>
+                            <th>Team Name</th>
+                            <th>Team Captain</th>
+                        </tr>
+                        {{#each ObeRiftTeams}}
+                            <tr>
+                                <td>{{name}}</td>
+                                <td>{{game}}</td>
+                                <td>{{teamCaptain}}</td>
+                            </tr>
+                        {{/each}}
+                        <!--li>{{gameStatsText}}</li-->
                     </table>
                 </div>
             </div>
         </div>
     </body>
-</template>
-
-
-<template name="ObeRiftTeams">
-
-    <tr>
-        <th>Team Name</th>
-        <th>Team Captain</th>
-    </tr>
-    {{#each ObeRiftTeams}}
-    <tr>
-        <td>{{name}}</td>
-        <td>{{game}}</td>
-        <td>{{teamCaptain}}</td>
-    </tr>
-    {{/each}}
-
-    <!--li>{{gameStatsText}}</li-->
 </template>

@@ -17,10 +17,21 @@
 
                     <table class="table">
 
-                        {{> ObeUserList}}
+                        {{> IgnList}}
                     </table>
 
-                    {{> GameStatistics}}
+                    <table class="table">
+                        <tr>
+                            <th>Username</th>
+                            <th>Summoner Level</th>
+                        </tr>
+                        {{#each stats}}
+                            <tr>
+                                <td>{{IGN}}</td>
+                                <td>{{level}}</td>
+                            </tr>
+                        {{/each}}
+                    </table>
                 </div>
                 <form class="form-inline">
                     <div class="form-group">
@@ -38,57 +49,3 @@
     </body>
 </template>
 
-<template name="GameStatistics">
-    <table class="table">
-        <tr>
-            <th>Username</th>
-            <th>Summoner Level</th>
-        </tr>
-        {{#each stats}}
-        <tr>
-            <td>{{IGN}}</td>
-            <td>{{level}}</td>
-        </tr>
-        {{/each}}
-    </table>
-</template>
-
-<template name="ObeUserList">
-
-    <tr>
-        <th>Game</th>
-        <th>In-Game Username</th>
-    </tr>
-    {{#each ObeUserList}}
-    <tr>
-        <!-- Button trigger modal -->
-        <td>
-            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#userGameModal{{game}}{{name}}">
-                {{game}}
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="userGameModal{{game}}{{name}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </td>
-
-        <td>{{name}}</td>
-    </tr>
-    {{/each}}
-
-    <!--li>{{gameStatsText}}</li-->
-</template>

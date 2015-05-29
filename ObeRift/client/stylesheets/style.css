@@ -50,10 +50,10 @@ div.panel {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: grey;
     text-shadow:
-        -0.5px -0.5px 0 grey,
-        0.5px -0.5px 0 grey,
-        -0.5px 0.5px 0 grey,
-        0.5px 0.5px 0 grey;
+    -0.5px -0.5px 0 grey,
+    0.5px -0.5px 0 grey,
+    -0.5px 0.5px 0 grey,
+    0.5px 0.5px 0 grey;
 }
 
 .red-column {
