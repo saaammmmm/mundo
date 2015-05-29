@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd7c530-e334-4820-bd1a-833ecb1f3d94" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/client/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/lib/router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/client/views/teams/teams.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/client/views/teams/teams.js" />
-      <change type="DELETED" beforePath="C:\Users\gordo\Documents\GitHub\mundo\ObeRift\ObeRift.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/lib/collections/ObeGameList.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/lib/collections/ObeRiftTeams.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ObeRift/lib/collections/ObeUserList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/ObeRift.js" afterPath="$PROJECT_DIR$/ObeRift/ObeRift.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/index.html" afterPath="$PROJECT_DIR$/ObeRift/client/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/.meteor/packages" afterPath="$PROJECT_DIR$/ObeRift/.meteor/packages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/lib/router.js" afterPath="$PROJECT_DIR$/ObeRift/lib/router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/.meteor/versions" afterPath="$PROJECT_DIR$/ObeRift/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mundo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,21 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ObeRift.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ObeRift.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObeRift/ObeRift.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3559464">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ObeRift/client/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-75.0">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.23954704">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -94,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/ObeRift/lib/router.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -110,33 +111,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ObeRift.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/ObeRift.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Keys" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/API keys/Keys">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="41" selection-start-line="0" selection-start-column="41" selection-end-line="0" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Html5" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -151,13 +132,17 @@
         <option value="$PROJECT_DIR$/GameTeam/GameTeam.html" />
         <option value="$PROJECT_DIR$/ObeRift/ObeRift.css" />
         <option value="$PROJECT_DIR$/ObeRift/API keys/Keys" />
-        <option value="$PROJECT_DIR$/ObeRift/ObeRift.js" />
         <option value="$PROJECT_DIR$/ObeRift/ObeRift.html" />
         <option value="$PROJECT_DIR$/ObeRift/client/index.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/teams/teams.html" />
-        <option value="$PROJECT_DIR$/ObeRift/client/index.html" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/ObeRift/lib/collections/ObeUserList.js" />
+        <option value="$PROJECT_DIR$/ObeRift/lib/collections/ObeRiftTeams.js" />
+        <option value="$PROJECT_DIR$/ObeRift/lib/collections/ObeGameList.js" />
+        <option value="$PROJECT_DIR$/ObeRift/ObeRift.js" />
+        <option value="$PROJECT_DIR$/ObeRift/lib/router.js" />
+        <option value="$PROJECT_DIR$/ObeRift/client/index.html" />
       </list>
     </option>
   </component>
@@ -169,10 +154,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="2174" />
-    <option name="height" value="1402" />
+    <option name="x" value="1070" />
+    <option name="width" value="1100" />
+    <option name="height" value="1390" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -253,6 +237,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mundo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mundo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ObeRift" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="collections" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -398,10 +404,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2174" height="1402" extended-state="0" />
+    <frame x="1070" y="0" width="1100" height="1390" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16910033" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21925643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -559,14 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/lib/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/views/teams/teams.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -601,18 +599,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/index.html">
+    <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/ObeUserList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-75.0">
-          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/ObeRiftTeams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/ObeGameList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/ObeRift.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3559464">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/lib/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23954704">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding />
         </state>
       </provider>

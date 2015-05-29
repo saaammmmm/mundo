@@ -1,17 +1,6 @@
-
-ObeUserList = new Mongo.Collection('ObeUserList');
-
-ObeRiftTeams = new Mongo.Collection('ObeRiftTeams');
-
-ObeGameList = new Mongo.Collection('ObeGameList');
-
 if (Meteor.isClient) {
 
-  Router.map(function(){
-    this.route('home',          {path: '/'});
-    this.route('dashboard',     {path: 'dashboard'});
-    this.route('teams',         {path: 'teams'});
-  }); // end of Router.map()...
+
 
 
 

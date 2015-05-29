@@ -1,0 +1,1 @@
+ObeUserList = new Mongo.Collection('ObeUserList');
