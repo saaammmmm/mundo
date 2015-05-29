@@ -15,6 +15,10 @@ body {
     background-color: rgb(50, 50, 50) !important;
 }
 
+img {
+    max-width: 100%;
+}
+
 .form-control{
     background-color: rgb(70, 70, 70);
     margin-top: 2px;

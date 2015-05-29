@@ -5,7 +5,7 @@ Template.dashboard.events({
         var game = event.target.gameTitle.value;
         var playerName = event.target.gameUserName.value;
 
-        console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);
+       /* console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);*/
         IgnList.insert({
             obeUserName: obeUserName,
             name: playerName,
@@ -13,7 +13,7 @@ Template.dashboard.events({
         });
         event.target.gameTitle.value = "";
         event.target.gameUserName.value = "";
-        console.log("Added game");
+        Meteor.call('getLoLAccount', playerName);
     }
 });
 
@@ -22,21 +22,3 @@ Template.dashboard.helpers({
         return GameList.find();
     }
 });
-
-Template.dashboard.created = function(){
-    var League = IgnList.find({game: 'League of Legends'});
-    League.forEach(function(user){
-        Meteor.call('getLoLAccount', user.name, function(err, respJson) {
-            if(err) {
-                window.alert("Error: " + err.reason);
-                console.log("error occured on receiving data on server. ", err );
-            } else {
-                var username = user.name.toLowerCase();
-                console.log("respJson: ", respJson);
-                //window.alert(respJson.length + ' tweets received.');
-
-                console.log("GameList:" + GameList);
-            }
-        });
-    });
-};
