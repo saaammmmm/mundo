@@ -8,11 +8,11 @@
             <div class="jumbotron">
                 <!--<h1><span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span></h1>-->
                 <!-- Begin the dashboard code -->
-                <h1>Hello, {{currentUser.username}}!</h1>
-                <p>This is your dashboard</p>
+                <br>
+                <h3>Welcome, {{currentUser.username}}!</h3>
                 <div class="container">
                     <header>
-                        <h3>Your Game Info</h3>
+                        <h5>Your Games</h5>
                     </header>
 
                     <table class="table">
@@ -20,18 +20,6 @@
                         {{> IgnList}}
                     </table>
 
-                    <table class="table">
-                        <tr>
-                            <th>Username</th>
-                            <th>Summoner Level</th>
-                        </tr>
-                        {{#each stats}}
-                            <tr>
-                                <td>{{IGN}}</td>
-                                <td>{{level}}</td>
-                            </tr>
-                        {{/each}}
-                    </table>
                 </div>
                 <form class="form-inline">
                     <div class="form-group">
