@@ -8,7 +8,7 @@ meteor-platform
 autopublish
 insecure
 accounts-password
-accounts-ui
 iron:router
 twbs:bootstrap
 http
+ian:accounts-ui-bootstrap-3

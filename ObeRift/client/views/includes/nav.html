@@ -15,12 +15,13 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right" style="font-weight: bold">
-                  <li><a href="#">Get the App</a></li>
-                  <li><a href="{{pathFor 'teams'}}">Team Central</a></li>
+               
+                <li><a href="#">Get the App</a></li>
+                <li><a href="{{pathFor 'teams'}}">Team Central</a></li>
                 {{#if currentUser}}
                   <li><a style="color: rgb(228,103,103);" href="{{pathFor 'dashboard'}}">Dashboard</a></li>
                 {{/if}}
-                  <li><a href="#">{{> loginButtons}}</a></li>
+                 <li><a href="#">{{> loginButtons align="right"}}</a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
