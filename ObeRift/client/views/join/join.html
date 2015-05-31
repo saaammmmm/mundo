@@ -1,0 +1,39 @@
+<template name="join">
+    <head>
+        <title>Join Us...</title>
+    </head>
+    <body>
+        {{> nav}}
+        <div class="container-fluid">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            {{#if currentUser}}
+                <a class="btn btn-danger" href="{{pathFor 'dashboard'}}" role="button">Dashboard</a>
+            {{else}}
+                            
+                       
+            <div class="input-group col-sm-6 col-sm-offset-3">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="text" class="form-control" id="account-username" placeholder="username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group col-sm-6 col-sm-offset-3">
+                <span class="input-group-addon" id="basic-addon1">@</span>
+                <input type="password" class="form-control" id="account-password" placeholder="password" aria-describedby="basic-addon1">
+
+            </div>   
+            <div class="alert alert-danger col-sm-6 col-sm-offset-3" id="genericAlert" style="display:none" role="alert"></div>
+
+            <div class="btn-group col-sm-6 col-sm-offset-3 " role="group" aria-label="when done">
+                <button type="button" id="create-account" class="btn btn-default">Create Account</button>
+                <button type="button" id="login" class="btn btn-default">Login</button>
+            </div>
+             {{/if}}
+        </div>
+    </body>
+</template>
