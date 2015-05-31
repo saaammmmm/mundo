@@ -18,7 +18,9 @@ body {
 img {
     max-width: 100%;
 }
-
+#customInput {
+    display: block;
+}
 .form-control{
     background-color: rgb(70, 70, 70);
     margin-top: 2px;
