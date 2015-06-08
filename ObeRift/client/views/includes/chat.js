@@ -13,6 +13,7 @@ var subscribedUsers = {};
 
 Template.chatBox.helpers({
     "messages": function() {
+        console.log("Content of Chat Collection:" + chatCollection.find())
         return chatCollection.find();
     }
 });
