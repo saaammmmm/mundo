@@ -13,6 +13,7 @@ var subscribedUsers = {};
 
 Template.chatBox.helpers({
     "messages": function() {
+        console.log("Content of Chat Collection:" + chatCollection.find())
         return chatCollection.find();
     }
 });
@@ -39,6 +40,7 @@ Template.chatBox.events({
     "click #send": function() {
         console.log ("sent chat: ");
         var message = $('#chat-message').val();
+        console.log(message);
         chatCollection.insert({
             userId: 'me',
             message: message
