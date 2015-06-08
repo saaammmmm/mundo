@@ -1,4 +1,5 @@
-chatCollection = new Meteor.Collection('chat-stream');
+chatCollection = new Mongo.Collection(null);
+chatStream = new Meteor.Stream('chat-stream');
 
 chatStream.permissions.read(function(eventName) {
     return eventName == 'chat';
