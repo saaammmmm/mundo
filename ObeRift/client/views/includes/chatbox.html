@@ -1,11 +1,12 @@
 <template name="chatBox">
-    <div class="container">
+    <div>
         {{#each message}}
           {{>chatMessage}}
         {{/each}}
     </div>
     <textarea id="chat-message"></textarea><br>
     <button class="btn btn-primary" id="send">Send Chat</button>
+
 </template>
 
 <template name="chatMessage">

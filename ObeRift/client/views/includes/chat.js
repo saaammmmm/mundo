@@ -12,7 +12,7 @@ chatStream.on('chat', function(message) {
 var subscribedUsers = {};
 
 Template.chatBox.helpers({
-    "messages": function() {
+    "message": function() {
         console.log("Content of Chat Collection:" + chatCollection.find())
         return chatCollection.find();
     }

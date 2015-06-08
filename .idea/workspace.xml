@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="acd7c530-e334-4820-bd1a-833ecb1f3d94" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/views/includes/chat.js" afterPath="$PROJECT_DIR$/ObeRift/client/views/includes/chat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html" afterPath="$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html" />
     </list>
     <ignored path="mundo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2802198">
-              <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -74,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chatbox.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chatbox.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.17307693">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -166,7 +166,6 @@
         <option value="$PROJECT_DIR$/ObeRift/lib/collections/GameList.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chat.html" />
-        <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html" />
         <option value="$PROJECT_DIR$/ObeRift/server/permissions.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/chat.js" />
         <option value="$PROJECT_DIR$/ObeRift/server/publications.js" />
@@ -175,6 +174,7 @@
         <option value="$PROJECT_DIR$/ObeRift/server/chat.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chat.js" />
+        <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html" />
       </list>
     </option>
   </component>
@@ -862,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/server/publications.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -902,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/IgnList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
@@ -918,18 +902,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html">
+    <entry file="file://$PROJECT_DIR$/ObeRift/server/publications.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2802198">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chatbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17307693">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
