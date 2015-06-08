@@ -1,3 +1,14 @@
+chatCollection = new Mongo.Collection(null);
+chatStream = new Meteor.Stream('chat-stream');
+
+chatStream.on('chat', function(message) {
+    chatCollection.insert({
+        userId: this.userId, //this is the userId of the sender
+        subscriptionId: this.subscriptionId, //this is the subscriptionId of the sender
+        message: message
+    });
+});
+
 Template.chatBox.helpers({
     "messages": function() {
         return chatCollection.find();
@@ -26,10 +37,3 @@ Template.chatBox.events({
     }
 });
 
-chatStream.on('chat', function(message) {
-    chatCollection.insert({
-        userId: this.userId, //this is the userId of the sender
-        subscriptionId: this.subscriptionId, //this is the subscriptionId of the sender
-        message: message
-    });
-});
