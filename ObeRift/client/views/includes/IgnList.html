@@ -5,20 +5,43 @@
       <div class="panel-heading" role="tab" id="heading{{$index}}">
     
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
-            
-            <div class="col-md-8" style="color: rgb(228,103,103);">
+            <div class="row">
+              <div class="col-md-6 col-xs-6" style="color: rgb(228,103,103);">
                 <strong>{{game}} </strong>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-4 col-xs-4">
                 {{name}}
                 <span class="badge">{{level IGN=name}}</span>
               </div>
+              <div class="col-md-2 col-xs-6">
+                 <!-- Actions -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger dropdown-toggle btn-block" data-toggle="dropdown" aria-expanded="false">
+                    Actions <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Send Chat Invite</a></li>
+                    <li><a href="#">Send Request to Team-up</a></li>
+                    <li><a href="#">Send Game Invite</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li class="divider"></li>
+                    <li><button type="button" class="btn btn-danger btn-xs btn-block" id="removeGame"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remove</button></li>
+                  </ul>
+                </div>  
+              </div>
+            </div>
+           
           </a>
       </div>
       <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
         <div class="list-group">
-          <h5>Content for: {{$index}}</h5> 
-            {{game}} - {{name}}
+            
+            <ul>
+              <li>Game Title: {{game}}</li>
+              <li>In-Game Name: {{name}}</li>
+              <li>Level: {{level IGN=name}}</li>
+            </ul>
+
         </div>
       </div>
     </div>
