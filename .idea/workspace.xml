@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd7c530-e334-4820-bd1a-833ecb1f3d94" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" afterPath="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ObeRift/client/views/includes/chat.html" afterPath="$PROJECT_DIR$/ObeRift/client/views/includes/chat.html" />
     </list>
     <ignored path="mundo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,28 +56,18 @@
       <file leaf-file-name="IgnList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/IgnList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-20.923077">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html">
+      <file leaf-file-name="chat.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7718277">
-              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/GameList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.52307695">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -86,38 +76,18 @@
       <file leaf-file-name="chat.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="23" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="23" />
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/client/chat.js">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chat.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teams.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ObeRift/client/views/teams/teams.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="11" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+            <state vertical-scroll-proportion="-25.5">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -165,10 +135,10 @@
         <option value="$PROJECT_DIR$/ObeRift/client/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/ObeRift/lib/collections/GameList.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js" />
-        <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chat.html" />
         <option value="$PROJECT_DIR$/ObeRift/client/chat.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chat.js" />
         <option value="$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/ObeRift/client/views/includes/chat.html" />
       </list>
     </option>
   </component>
@@ -910,26 +880,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/IgnList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/GameList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -942,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -958,18 +904,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.html">
+    <entry file="file://$PROJECT_DIR$/ObeRift/lib/collections/GameList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.20549451">
+          <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObeRift/client/views/dashboard/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7718277">
+        <state vertical-scroll-proportion="-25.5">
           <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/IgnList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ObeRift/client/views/includes/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52307695">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding />
         </state>
       </provider>
