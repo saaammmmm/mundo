@@ -21,10 +21,15 @@
                     </table>
 
                 </div>
+                {{SupportedGames}}
                 <form class="form-inline">
-                    <div class="form-group">
-                        <label for="gameTitle"></label>
-                        <input type="text" class="form-control" id="gameTitle" name="gameTitle" placeholder="game title">
+
+                    <div class="form-group"> 
+                        <div class="input-group">
+                            <label for="Label"></label>
+                            <input type="text" data-source="supportedGames" class="form-control typeahead" autocomplete="off" spellcheck="off" data-min-length="0" name="gameTitle" placeholder="game title">
+                        </div>
+
                     </div>
                     <div class="form-group">
                         <label for="gameUserName"></label>
@@ -36,4 +41,6 @@
         </div>
     </body>
 </template>
+
+
 
