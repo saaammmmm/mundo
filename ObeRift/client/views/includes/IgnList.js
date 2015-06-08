@@ -1,6 +1,13 @@
 Template.IgnList.helpers({
     IgnList: function() {
-        return IgnList.find({obeUserName: Meteor.user().username});
+        try {
+            var ignUserName = IgnList.find({obeUserName: Meteor.user().username});
+        }
+        catch (err) {
+            console.log("IGN UserName Invalid");
+            ignUserName = null;
+        }
+        return ignUserName;
     },
     level: function(inGameName) {
         try {
