@@ -1,3 +1,5 @@
+chatStream = new Meteor.Stream('chat-stream');
+
 chatStream.permissions.read(function(eventName) {
     return eventName == 'chat';
 });
