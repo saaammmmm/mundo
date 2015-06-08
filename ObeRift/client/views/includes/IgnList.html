@@ -3,7 +3,7 @@
     {{#each $mapped IgnList}}   
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="heading{{$index}}">
-        <h4 class="panel-title">
+    
           <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
             
             <div class="col-md-8" style="color: rgb(228,103,103);">
@@ -14,7 +14,6 @@
                 <span class="badge">{{level IGN=name}}</span>
               </div>
           </a>
-        </h4>
       </div>
       <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
         <div class="list-group">

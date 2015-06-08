@@ -15,6 +15,7 @@ Template.chatMessage.helpers({
 // when `Send Chat` clicked, add the typed chat message into the collection
 Template.chatBox.events({
     "click #send": function() {
+        console.log ("sent chat: ");
         var message = $('#chat-message').val();
         chatCollection.insert({
             userId: 'me',
