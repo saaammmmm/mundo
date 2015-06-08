@@ -1,32 +1,29 @@
 <template name="IgnList">
-
-  <div class="accordion" id="gameListAccordian">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {{#each $mapped IgnList}}   
-      <div class="accordion-group">
-        <div class="accordion-heading">
-          <a class="accordion-toggle " data-toggle="collapse" data-parent="#gameListAccordian" href="#expandedGameInfoFor{{$index}}">
-            <!-- Button trigger modal -->
-            <a href="#" class="list-group-item col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading{{$index}}">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+            
             <div class="col-md-8" style="color: rgb(228,103,103);">
-              <strong>{{game}} </strong>
-            </div>
-            <div class="col-md-3">
-              {{name}}
-              <span class="badge">{{level IGN=name}}</span>
-            </div>
-            </a>
+                <strong>{{game}} </strong>
+              </div>
+              <div class="col-md-3">
+                {{name}}
+                <span class="badge">{{level IGN=name}}</span>
+              </div>
           </a>
-          <div id="expandedGameInfoFor{{$index}}" class="accordion-body collapse">
-            <div class="accordion-inner">
-              <h5>Expanded info for</h5> 
-               <p>{{game}}</p>
-               <p>{{name}}</p>
-            </div>
-          </div>  
+        </h4>
+      </div>
+      <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+        <div class="list-group">
+          <h5>Content for: {{$index}}</h5> 
+            {{game}} - {{name}}
         </div>
       </div>
+    </div>
     {{/each}}
   </div>
-    <!--li>{{gameStatsText}}</li-->
 </template>
 
