@@ -39,6 +39,9 @@ Template.chatMessage.helpers({
 Template.chatBox.events({
     "click #send": function() {
         console.log ("sent chat: ");
+ 
+       
+    
         var message = $('#chat-message').val();
         console.log(message);
         chatCollection.insert({

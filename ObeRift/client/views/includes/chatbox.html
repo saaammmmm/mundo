@@ -1,12 +1,36 @@
 <template name="chatBox">
-    <div>
-        {{#each message}}
-          {{>chatMessage}}
-        {{/each}}
-    </div>
-    <textarea id="chat-message"></textarea><br>
-    <button class="btn btn-primary" id="send">Send Chat</button>
+    
 
+ <div class="container-fluid">
+    <form class="form-inline">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+          <textarea type="text" class="form-control" id="chat-message" placeholder="Say something..." rows="3"></textarea>
+        </div>
+      </div>
+      
+      <div class="btn-group dropup"  id="chatWindow">
+          <button type="submit" id="send" class="btn btn-danger" data-toggle="dropdown">Send Chat <span class="glyphicon glyphicon-upload"   aria-hidden="true"></span></button>
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu"  role="menu">
+            <!-- Dropdown menu links -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                 <div>
+                    {{#each message}}
+                      {{>chatMessage}}
+                    {{/each}}
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+    </form>
+</div>
 </template>
 
 <template name="chatMessage">
