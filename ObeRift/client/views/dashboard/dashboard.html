@@ -41,7 +41,9 @@
                 </div>
             </div>
         </div>
-        {{> stickyBottom}}
+        {{#if currentUser}}
+            {{> stickyBottom}}
+        {{/if}}
     </body>
 </template>
 
