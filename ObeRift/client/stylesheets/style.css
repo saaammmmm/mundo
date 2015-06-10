@@ -12,7 +12,9 @@ h6 {
 }
 
 body {
-    background-color: rgb(50, 50, 50) !important;
+   /* background-color: rgb(50, 50, 50) !important; */
+     background-color: transparent !important;
+     background-image: url("http://fc04.deviantart.net/fs71/i/2014/022/9/d/league_of_legends_wallpaper_by_su_ke-d73cjyo.jpg");
 }
 
 img {
@@ -29,7 +31,8 @@ img {
 
 div.jumbotron, div.panel {
     color: rgb(230, 230, 230);
-    background-color: rgb(50, 50, 50);
+    background-color: transparent !important;
+    /* background-color: rgb(50, 50, 50) !important; */
 }
 
 div.panel {
