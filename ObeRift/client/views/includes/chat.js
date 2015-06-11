@@ -48,6 +48,7 @@ Template.chatBox.events({
     "keypress #chat-message": function(evt, template){
         if(evt.which === 13) {
             $("#send").click();
+            $("#chat-message").focus();
         }
     }
 });
