@@ -133,7 +133,7 @@ div.panel {
 }
 
 #chat {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     text-align: right;
 }
@@ -145,3 +145,13 @@ div.panel {
     padding: 10px;
 }
 
+.settings-toggle {
+    background-color: transparent;
+    border: 0px;
+}
+
+.game-list {
+    background-color: rgba(248,248,248, 0.8);
+    padding: 2px;
+    box-shadow: 3px 3px grey;
+}

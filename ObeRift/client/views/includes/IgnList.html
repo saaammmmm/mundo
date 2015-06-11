@@ -1,51 +1,42 @@
 <template name="IgnList">
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
     {{#each $mapped IgnList}}   
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="heading{{$index}}">
-    
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
-            <div class="row">
-              <div class="col-md-6 col-sm-6" style="color: rgb(228,103,103);">
-                <strong>{{game}} </strong>
-              </div>
-              <div class="col-md-4 col-sm-5">
-                {{name}}
-                <span class="badge">{{level IGN=name}}</span>
-              </div>
-              <div class="col-md-2 col-sm-1">
-                 <!-- Actions -->
-                <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" aria-expanded="false">
-                    <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Send Chat Invite</a></li>
-                    <li><a href="#">Send Request to Team-up</a></li>
-                    <li><a href="#">Send Game Invite</a></li>
-                    <li><a href="#">Report</a></li>
-                    <li class="divider"></li>
-                    <li><button type="button" class="btn btn-danger btn-xs btn-block" id="removeGame"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remove</button></li>
-                  </ul>
-                </div>  
-              </div>
-            </div>
-           
-          </a>
-      </div>
-      <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+    <div class="row game-list">
+        <div role="tab" id="heading{{$index}}">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="color: rgb(228,103,103);">
+                    <strong>{{game}}</strong>
+                </div>
+                <div class="col-md-4 col-sm-4 col-sm-6">
+                    {{name}}
+                    <span class="badge">{{level IGN=name}}</span>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-4">
+                    <div>
+                        <button type="button" class="settings-toggle dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Send Chat Invite</a></li>
+                            <li><a href="#">Send Request to Team-up</a></li>
+                            <li><a href="#">Send Game Invite</a></li>
+                            <li><a href="#">Report</a></li>
+                            <li class="divider"></li>
+                            <li><button type="button" class="btn btn-danger btn-xs btn-block" id="removeGame"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Remove</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="collapse{{$index}}" class="collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
         <div class="list-group">
-            
             <ul>
               <li>Game Title: {{game}}</li>
               <li>In-Game Name: {{name}}</li>
               <li>Level: {{level IGN=name}}</li>
             </ul>
-
         </div>
-      </div>
     </div>
     {{/each}}
-  </div>
 </template>
 

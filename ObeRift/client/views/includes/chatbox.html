@@ -1,6 +1,6 @@
 <template name="chatBox">
 
- <div id="chat" class="col-md-4 col-xs-4 col-sm-4">
+ <div id="chat" class="footer col-md-4 col-xs-8 col-sm-6">
      <div class="container-fluid">
          <a data-toggle="collapse" href="#chatCollapse" aria-expanded="false" aria-controls="chatCollapse">
              <div class="chat-header">
@@ -14,12 +14,13 @@
                          {{>chatMessage}}
                      {{/each}}
                  </div>
-                 <div class="input-group">
-                     <textarea type="text" class="form-control" id="chat-message" placeholder="Say something..."></textarea>
-                 </div>
-                 <button type="submit" id="send" class="btn btn-danger" data-toggle="dropdown">Send Chat <span class="glyphicon glyphicon-upload"   aria-hidden="true"></span></button>
+                 <form>
+                     <div class="input-group">
+                         <textarea type="text" class="form-control" id="chat-message" placeholder="Say something..."></textarea>
+                     </div>
+                     <button type="submit" id="send" class="btn btn-danger" data-toggle="dropdown">Send Chat <span class="glyphicon glyphicon-upload"   aria-hidden="true"></span></button>
+                 </form>
              </div>
-
          </div>
      </div>
 </div>

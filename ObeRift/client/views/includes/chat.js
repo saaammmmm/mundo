@@ -9,8 +9,6 @@ chatStream.on('chat', function(message) {
     });
 });
 
-var subscribedUsers = {};
-
 Template.chatBox.helpers({
     "message": function() {
         console.log("Content of Chat Collection:" + chatCollection.find())
@@ -38,10 +36,6 @@ Template.chatMessage.helpers({
 // when `Send Chat` clicked, add the typed chat message into the collection
 Template.chatBox.events({
     "click #send": function() {
-        console.log ("sent chat: ");
- 
-       
-    
         var message = $('#chat-message').val();
         console.log(message);
         chatCollection.insert({
@@ -50,6 +44,11 @@ Template.chatBox.events({
         });
         chatStream.emit('chat', message);
         $('#chat-message').val('');
+    },
+    "keypress #chat-message": function(evt, template){
+        if(evt.which === 13) {
+            $("#send").click();
+        }
     }
 });
 
