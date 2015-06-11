@@ -12,9 +12,9 @@ h6 {
 }
 
 body {
-   /* background-color: rgb(50, 50, 50) !important; */
-     background-color: transparent !important;
-     background-image: url("http://fc04.deviantart.net/fs71/i/2014/022/9/d/league_of_legends_wallpaper_by_su_ke-d73cjyo.jpg");
+    /* background-color: rgb(50, 50, 50) !important; */
+    background-color: transparent !important;
+    background-image: url("http://fc04.deviantart.net/fs71/i/2014/022/9/d/league_of_legends_wallpaper_by_su_ke-d73cjyo.jpg");
 }
 
 img {
@@ -154,4 +154,11 @@ div.panel {
     background-color: rgba(248,248,248, 0.8);
     padding: 2px;
     box-shadow: 1px 1px 10px grey;
+}
+
+.game-list-details {
+    background-color: rgba(255,255,255, 0.8);
+    color: dimgrey;
+    box-shadow: 2px 2px 10px grey;
+    border-radius: 0 0 2px 2px;
 }
