@@ -153,5 +153,5 @@ div.panel {
 .game-list {
     background-color: rgba(248,248,248, 0.8);
     padding: 2px;
-    box-shadow: 3px 3px grey;
+    box-shadow: 1px 1px 10px grey;
 }
