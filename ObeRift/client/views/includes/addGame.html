@@ -1,0 +1,44 @@
+<template name="addGame">
+   <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success btn-lg" id="addGameButton" data-toggle="modal" data-target="#addGameModal">
+      Add a game...
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="addGameModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="addGameTitleLabel">Add a game...</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Game Title" id="addGameGameTitle" aria-label="Game Title">
+                      <span class="input-group-addon" ><span id="addGameGameTitleIcon" class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control"  placeholder="In-Game Username" id="addGameIgn" aria-label="In Game Name">
+                        <span class="input-group-addon"><span id="addGameIgnIcon"  class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+                    </div>
+                    
+                        <span>Authentication Code</span>
+                        <span class="label label-default" id="addGameAuthenticationCode" placeholder="Authentication Code"></span>
+
+                   
+                        <button class="btn btn-default" id="attemptToVerify" type="button">Verify</button>
+                    
+                    
+                  </div>
+                </div>
+            </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>
