@@ -23,5 +23,63 @@ Meteor.methods({
         } catch (e) {
             console.log(e);
         }
+    },
+
+    // To get the rune page from a username
+    'getRunePageByLolUsername': function (userName) {
+        //
+        console.log("Fetching summonerID  for: " + userName);
+        var summonerIdFromSummonerNameurl = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName.toLowerCase() + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
+
+
+        // This will hold the summonerId from the summonername
+        var summonerId = "notAssigned"; // init it to null string
+        console.log("Requesting Summoner Id from Summoner Name of: " + userName.toLowerCase());
+        try {
+            var result = HTTP.get(summonerIdFromSummonerNameurl, function(err, result){
+                if (result.statusCode == 200) {
+                    var userlower = userName.toLowerCase();
+                    var respJson = JSON.parse(result.content);
+                    summonerId = respJson[userlower].id;
+                    console.log("Local SummonerId: " + summonerId);
+                    // Display the summonerId that was retrieved from the summonerName
+                    console.log("Retrieved summonerId: " + summonerId);
+
+                    // Get the rune page name
+                    console.log("Requesting Run Page from Summoner from ID");
+
+                    var runePageName = ""; // init it to null string
+                    console.log("Requesting Rune Info  from Summoner ID of: " + summonerId);
+                    var runePageNameFromSummonerIdUrl = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/" + summonerId + "/runes?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
+
+
+
+                    try {
+                        var result = HTTP.get(runePageNameFromSummonerIdUrl, function(err, result){
+                            if (result.statusCode == 200) {
+                                        var respJson = JSON.parse(result.content);
+                                            console.log(respJson)
+                                            runePageName = respJson[summonerId].pages[0].name;
+                                             console.log("Local Retrieved Rune Page: " + runePageName);
+                                            alert("Local Got rune page name of " + runePageName); 
+                                            console.log("Local Rune Object:" + respJson[summonerId]);
+                                }
+                        });
+                    } catch (e) {
+                        console.log(e);
+                        alert("Error!!! " + e);
+                    }
+                      // Display the rune page that was retrieved from the summonerId
+                    console.log("Retrieved Rune Page: " + runePageName);
+                    alert("Got rune page name of " + runePageName);
+
+                        
+                }
+            });
+        } catch (e) {
+            console.log(e);
+            alert("Error Getting SummonerId!!! " + e);
+        }
+        
     }
 });
