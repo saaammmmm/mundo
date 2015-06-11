@@ -15,6 +15,7 @@ body {
     /* background-color: rgb(50, 50, 50) !important; */
     background-color: transparent !important;
     background-image: url("http://fc04.deviantart.net/fs71/i/2014/022/9/d/league_of_legends_wallpaper_by_su_ke-d73cjyo.jpg");
+    background-size: cover;
 }
 
 img {
@@ -69,6 +70,10 @@ div.panel {
     background-color: rgb(228,103,103);
     background-size: cover;
     height: 98vh;
+}
+
+.red {
+    color: rgb(228,103,103);
 }
 
 .green-column {
