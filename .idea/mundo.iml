@@ -3,6 +3,12 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/ObeRift/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/examples/chat-with-cluster/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/examples/chat-with-filters/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/examples/chat/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/examples/streaming-homepage-reactive/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/examples/streaming-homepage/.meteor/local" />
+      <excludeFolder url="file://$MODULE_DIR$/ObeRift/packages/streams/laika/.meteor/local" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

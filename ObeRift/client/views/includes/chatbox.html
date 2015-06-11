@@ -1,35 +1,27 @@
 <template name="chatBox">
-    
 
- <div class="container-fluid">
-    <form class="form-inline">
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
-          <textarea type="text" class="form-control" id="chat-message" placeholder="Say something..." rows="3"></textarea>
-        </div>
-      </div>
-      
-      <div class="btn-group dropup"  id="chatWindow">
-          <button type="submit" id="send" class="btn btn-danger" data-toggle="dropdown">Send Chat <span class="glyphicon glyphicon-upload"   aria-hidden="true"></span></button>
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-          </button>
-          <ul class="dropdown-menu"  role="menu">
-            <!-- Dropdown menu links -->
-            <div class="panel panel-default">
-              <div class="panel-body">
-                 <div>
-                    {{#each message}}
-                      {{>chatMessage}}
-                    {{/each}}
-                </div>
-              </div>
-            </div>
-          </ul>
-        </div>
-    </form>
+ <div id="chat" class="col-md-4 col-xs-4 col-sm-4">
+     <div class="container-fluid">
+         <a data-toggle="collapse" href="#chatCollapse" aria-expanded="false" aria-controls="chatCollapse">
+             <div class="chat-header">
+                 Chat
+             </div>
+         </a>
+         <div class="collapse" id="chatCollapse">
+             <div class="chat-box">
+                 <div class="chat">
+                     {{#each message}}
+                         {{>chatMessage}}
+                     {{/each}}
+                 </div>
+                 <div class="input-group">
+                     <textarea type="text" class="form-control" id="chat-message" placeholder="Say something..."></textarea>
+                 </div>
+                 <button type="submit" id="send" class="btn btn-danger" data-toggle="dropdown">Send Chat <span class="glyphicon glyphicon-upload"   aria-hidden="true"></span></button>
+             </div>
+
+         </div>
+     </div>
 </div>
 </template>
 
