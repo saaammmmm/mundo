@@ -63,15 +63,18 @@ Meteor.methods({
                                              console.log("Local Retrieved Rune Page: " + runePageName);
                                             alert("Local Got rune page name of " + runePageName); 
                                             console.log("Local Rune Object:" + respJson[summonerId]);
+                                            return respJson[summonerId];
                                 }
                         });
                     } catch (e) {
                         console.log(e);
                         alert("Error!!! " + e);
+                        throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
                     }
                       // Display the rune page that was retrieved from the summonerId
                     console.log("Retrieved Rune Page: " + runePageName);
                     alert("Got rune page name of " + runePageName);
+                    throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
 
                         
                 }
@@ -79,7 +82,8 @@ Meteor.methods({
         } catch (e) {
             console.log(e);
             alert("Error Getting SummonerId!!! " + e);
+            throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
         }
-        
+        throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
     }
 });

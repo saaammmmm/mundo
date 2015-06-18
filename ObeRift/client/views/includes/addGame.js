@@ -20,14 +20,30 @@ Template.addGame.events({
     },
     // This happens when you try to authenticate using teh provided random code
     'click #attemptToVerify': function() {
-        //var userName = ('#addGameIgn').val(); // This is not working :()
-        // console.log("Before calling server function to get id, userName:" + userName);
-        Meteor.call('getRunePageByLolUsername', 'Tiandi', function (error, result) { console.log('Rune Page Verification Called Asychonously') } );   
+        var userName = $('#addGameIgn').val(); // This is not working :( - Because you were fucking drunk and did not add the $ in front of the JQuery Shit... IDIOT ASSHOLE
+        console.log("Before calling server function to get id, userName:" + userName);
+        Meteor.call('getRunePageByLolUsername', userName, function (error, result) { 
+
+            console.log("result: " + result);
+            console.log("error: " + error);
+            console.log('Rune Page Verification Called Asychonously');
+
+         } );   
     }
 });
 
 function createNewAuthenticationCode(){
-    return "DEADBEEF";
+    return makeid();
 }
 
 
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 8; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
