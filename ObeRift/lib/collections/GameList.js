@@ -26,7 +26,7 @@ Meteor.methods({
     },
 
     // To get the rune page from a username
-    'getRunePageByLolUsername': function (userName, verificationCode) {
+    'getRunePageByLolUsername': function (userName, verificationCode, gameTitle) {
         //
         console.log("Fetching summonerID  for: " + userName + "\t\tusing verificationCode: " + verificationCode);
         var summonerIdFromSummonerNameurl = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName.toLowerCase() + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
@@ -52,7 +52,9 @@ Meteor.methods({
                     console.log("Requesting Rune Info  from Summoner ID of: " + summonerId);
                     var runePageNameFromSummonerIdUrl = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/" + summonerId + "/runes?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
 
+                    var level = respJson[userlower].summonerLevel;
 
+                  
 
                     try {
                         var result = HTTP.get(runePageNameFromSummonerIdUrl, function(err, result){
@@ -65,10 +67,37 @@ Meteor.methods({
                                             console.log("Local Rune Object:" + respJson[summonerId]);
                                             console.log("Checking: " + verificationCode);
                                             if (verificationCode.trim() == runePageName.trim()  ) {
+                                                GameList.insert({
+                                                    IGN: userName,
+                                                    level: level,
+                                                    Game: gameTitle},
+                                                    function (error, result) {
+                                                        if (error) {
+                                                            console.log("GameListInsertError: " + error);
+                                                        }
+                                                        else {
+                                                            console.log("Inserted into GameList List: " + result);
+                                                        }
+                                                    }
+                                                );
+                                                IgnList.insert({
+                                                    obeUserName: Meteor.user().username,
+                                                    name: userName,
+                                                    game: gameTitle},
+                                                    function (error, result) {
+                                                        if (error) {
+                                                            console.log("IgnListInsertError: " + error);
+                                                        }
+                                                        else {
+                                                            console.log("Inserted into IGN List: " + result);
+                                                        }
+                                                    }
+                                                );
                                                 console.log("SUCCESSFUL VERIFICATION!!!!...");
                                             } else {
                                                 console.log("Unable to verify...");
                                                 throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+
                                             }
                                 }
                         });
