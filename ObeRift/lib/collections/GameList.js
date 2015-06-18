@@ -26,9 +26,9 @@ Meteor.methods({
     },
 
     // To get the rune page from a username
-    'getRunePageByLolUsername': function (userName) {
+    'getRunePageByLolUsername': function (userName, verificationCode) {
         //
-        console.log("Fetching summonerID  for: " + userName);
+        console.log("Fetching summonerID  for: " + userName + "\t\tusing verificationCode: " + verificationCode);
         var summonerIdFromSummonerNameurl = "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/" + userName.toLowerCase() + "?api_key=d1269d52-93a3-48b8-a4c9-1961975da3b5";
 
 
@@ -61,29 +61,35 @@ Meteor.methods({
                                             console.log(respJson)
                                             runePageName = respJson[summonerId].pages[0].name;
                                              console.log("Local Retrieved Rune Page: " + runePageName);
-                                            alert("Local Got rune page name of " + runePageName); 
+                                            console.log("Local Got rune page name of " + runePageName); 
                                             console.log("Local Rune Object:" + respJson[summonerId]);
-                                            return respJson[summonerId];
+                                            console.log("Checking: " + verificationCode);
+                                            if (verificationCode.trim() == runePageName.trim()  ) {
+                                                console.log("SUCCESSFUL VERIFICATION!!!!...");
+                                            } else {
+                                                console.log("Unable to verify...");
+                                                throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+                                            }
                                 }
                         });
                     } catch (e) {
                         console.log(e);
-                        alert("Error!!! " + e);
-                        throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+                        console.log("Error!!! " + e);
+                        //throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
                     }
                       // Display the rune page that was retrieved from the summonerId
                     console.log("Retrieved Rune Page: " + runePageName);
-                    alert("Got rune page name of " + runePageName);
-                    throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+                    console.log("Got rune page name of " + runePageName);
+                   // throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
 
                         
                 }
             });
         } catch (e) {
             console.log(e);
-            alert("Error Getting SummonerId!!! " + e);
-            throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+            console.log("Error Getting SummonerId!!! " + e);
+            //throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
         }
-        throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
+        //throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
     }
 });

@@ -21,11 +21,15 @@ Template.addGame.events({
     // This happens when you try to authenticate using teh provided random code
     'click #attemptToVerify': function() {
         var userName = $('#addGameIgn').val(); // This is not working :( - Because you were fucking drunk and did not add the $ in front of the JQuery Shit... IDIOT ASSHOLE
-        console.log("Before calling server function to get id, userName:" + userName);
-        Meteor.call('getRunePageByLolUsername', userName, function (error, result) { 
-
-            console.log("result: " + result);
-            console.log("error: " + error);
+        var verificationCode = $('#addGameAuthenticationCode').text()
+        console.log("Before calling server function to get id, userName:" + userName + "\t\t\tverificationCode: " + verificationCode);
+        Meteor.call('getRunePageByLolUsername', userName, verificationCode, function (error, result) { 
+            if (error) {
+                console.log("error: " + error);
+            }
+            else {
+                console.log("result: " + result);
+            }
             console.log('Rune Page Verification Called Asychonously');
 
          } );   
