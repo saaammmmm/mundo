@@ -5,27 +5,32 @@
     <body>
     {{> nav}}
     <div class="container-fluid">
-        <div class="jumbotron">
             <!--<h1><span style="color: rgb(228,69,69)">OBE</span><span class="white-font">RIFT</span></h1>-->
             <!-- Begin the dashboard code -->
             <br>
             <h3>Welcome, {{currentUser.username}}!</h3>
             <div class="container">
-                <header>
-                    <h5>Your Games</h5>
-                </header>
+                
 
-                <div class="row">
-                    <div class="panel panel-default">
+            <div class="row">
+                <div class="panel panel-default">
                     <div class="panel-body">
-                    <div class="col-md-5 col-sm-6 col-xs-12">
-
-                        {{> IgnList}}
+                        <div class="col-md-5 col-sm-6 col-xs-12">
+                            <header>
+                                <h5>Your Games</h5>
+                            </header>
+                            {{> IgnList}}
+                        </div>
+                         <div class="col-md-5 col-sm-6 col-xs-12">
+                            <header>
+                                <h5>Your Teams</h5>
+                            </header>
+                            {{> UserTeams}}
+                        </div>
                     </div>
-                    </div>
-                    </div>
-                    <div class="col-md-7">Testing this out</div>
                 </div>
+                <div class="col-md-7">Testing this out</div>
+            </div>
 
             </div>
             <div class="panel panel-default">
@@ -35,12 +40,18 @@
             </div>
             <div>
             </div>
-        </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     </div>
     {{#if currentUser}}
         {{> chatBox}}
     {{/if}}
     </body>
+
 </template>
 
 
