@@ -1,7 +1,7 @@
 <template name="addGame">
    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success btn-lg" id="addGameButton" data-toggle="modal" data-target="#addGameModal">
-      Add a game...
+    <button type="button" class="btn btn-danger btn" id="addGameButton" data-toggle="modal" data-target="#addGameModal">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Game
     </button>
 
     <!-- Modal -->
@@ -24,7 +24,7 @@
                         <span class="input-group-addon"><span id="addGameIgnIcon"  class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
                     </div>
                     
-                        <h3>Authentication Code</h3>
+                        <h3 class="red">Authentication Code</h3>
                         <span class="label label-default" id="addGameAuthenticationCode" placeholder="Authentication Code"></span>
 
                    

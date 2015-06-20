@@ -7,13 +7,14 @@
     padding: 5px;
 }
 
-h6 {
+h6, h2 {
     color: rgb(230, 230, 230);
 }
+
 html {
     /* background-color: rgb(50, 50, 50) !important; */
     
-    background-image: url("/armor_bg.jpg");
+    background-image: url("/action2.jpg");
     background-size: auto auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -78,6 +79,7 @@ div.panel {
 
 .red {
     color: rgb(228,103,103);
+
 }
 
 .green-column {
@@ -171,4 +173,9 @@ div.panel {
     color: dimgrey;
     box-shadow: 2px 2px 10px grey;
     border-radius: 0 0 2px 2px;
+}
+.modal-content {
+    background-color: rgba(240, 240, 240, 0.8);
+    padding: 2px;
+    box-shadow: 1px 1px 10px grey;
 }
