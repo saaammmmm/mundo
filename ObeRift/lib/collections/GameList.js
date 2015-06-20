@@ -97,7 +97,6 @@ Meteor.methods({
                                             } else {
                                                 console.log("Unable to verify...");
                                                 throw new Meteor.Error(500, 'Error 500: Not found', 'Verification failed');
-
                                             }
                                 }
                         });
