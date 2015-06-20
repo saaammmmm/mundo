@@ -26,14 +26,15 @@
                     <table class="table">
                         <tr>
                             <th>Team Name</th>
+                            <th>Game</th>
                             <th>Team Captain</th>
+
                         </tr>
                         {{#each Teams}}
                             <tr>
                                 <td>{{name}}</td>
                                 <td>{{game}}</td>
                                 <td>{{teamCaptain}}</td>
-                                <td>{{battleCry}}</td>
                             </tr>
                         {{/each}}
                         <!--li>{{gameStatsText}}</li-->
@@ -76,7 +77,7 @@
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-success" id="createTeamButton">Create</button>
+                            <button type="buttom" class="btn btn-success" id="createTeamButton">Create</button>
                           </div>
                         </div>
                     </div>

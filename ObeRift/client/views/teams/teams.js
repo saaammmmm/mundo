@@ -1,12 +1,12 @@
 Template.teams.helpers({
-    ObeRiftTeams: function() {
+    Teams: function() {
         return Teams.find();
     }
 });
 
-Template.dashboard.events({
+Template.teams.events({
     // PUT THIS ON THE SERVER SIDE!!!
-    "submit createTeamButton": function(event){
+    "click #createTeamButton": function(event){
         console.log("Creating new team")
         event.preventDefault();
         var obeUserName = Meteor.user().username;
@@ -23,9 +23,6 @@ Template.dashboard.events({
             teamCaptain: game,
             battleCry: battleCry
         });
-        event.target.name.value = "";
-        event.target.game.value = "";
-        event.target.teamCaptain.value = "";
-        event.target.battleCry.value = "";
+        
     }
 });
