@@ -1,0 +1,18 @@
+<template name="teamHome">
+    <head>
+        <title>Team Home</title>
+    </head>
+    <body>
+        {{> nav}}}
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h3>Team Home</h3>
+            </div>
+        </div>
+     
+
+        {{#if currentUser}}
+            {{> stickyBottom}}
+        {{/if}}
+    </body>
+</template>

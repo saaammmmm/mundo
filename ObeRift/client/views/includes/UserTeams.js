@@ -1,10 +1,4 @@
-Template.teams.helpers({
-    Teams: function() {
-        return Teams.find();
-    }
-});
-
-Template.teams.events({
+Template.UserTeams.events({
     // PUT THIS ON THE SERVER SIDE!!!
     "click #createTeamButton": function(event){
         console.log("Creating new team")
@@ -12,17 +6,20 @@ Template.teams.events({
         var obeUserName = Meteor.user().username;
         var name = $('#teamName').val();
         var game = $('#teamGame').val();
-        var teamCaptain = $('#teamCaptain').val();
         var battleCry = $('#teamBattlecry').val();
+        var teamCaptain = $('#teamCaptain').val();
 
        /* console.log("Inserting:\n" + obeUserName + "\n" + game + "\n" + playerName);*/
         Teams.insert({
             obeUserName: obeUserName,
             name: name,
             game: game,
-            teamCaptain: teamCaptain,
+            teamCaptain: game,
             battleCry: battleCry
         });
-        
+        event.target.name.value = "";
+        event.target.game.value = "";
+        event.target.teamCaptain.value = "";
+        event.target.battleCry.value = "";
     }
 });
