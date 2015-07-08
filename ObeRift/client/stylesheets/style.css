@@ -10,10 +10,28 @@
 h6, h2 {
     color: rgb(230, 230, 230);
 }
+body {
+    font-family: sans-serif;
+}
 
+dt {
+    margin-top: 7px;
+}
+
+dd {
+    margin-top: 7px;
+}
+
+li {
+    margin-top: 3px;
+}
+
+ul {
+    list-style-type: none;
+}
 html {
     /* background-color: rgb(50, 50, 50) !important; */
-    
+
     background-image: url("/action2.jpg");
     background-size: auto auto;
     background-repeat: no-repeat;
@@ -35,12 +53,15 @@ img {
     color: rgb(220, 220, 220);
 }
 
-div.jumbotron, div.panel {
+div.panel {
     color: rgb(230, 230, 230);
-    background-color: transparent !important;
+    background-color: rgba(80, 80, 80, 0.5);;
     /* background-color: rgb(50, 50, 50) !important; */
 }
-
+div.jumbotron {
+  color: rgb(230, 230, 230);
+  background-color: transparent !important;
+}
 div.panel {
     margin-bottom: 0px;
     border: 0px
@@ -61,6 +82,7 @@ div.panel {
     color: rgb(60,60,60);
     font-weight: bold;
 }
+
 .outlined-font {
     color: whitesmoke;
     font-weight: bold;

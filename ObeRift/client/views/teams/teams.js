@@ -23,6 +23,6 @@ Template.teams.events({
             teamCaptain: teamCaptain,
             battleCry: battleCry
         });
-        
+
     }
 });
